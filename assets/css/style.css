@@ -1,0 +1,163 @@
+/* ===== Global Colors ===== */
+:root {
+  --primary-blue: #0A2A4D;
+  --accent-yellow: #FFD700;
+  --text-dark: #222;
+  --text-light: #555;
+  --bg-light: #F8F9FA;
+  --white: #fff;
+}
+
+/* ===== Typography ===== */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-dark);
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: var(--primary-blue);
+}
+.navbar-brand img {
+  height: 45px;
+  margin-right: 8px;
+}
+.nav-link {
+  color: var(--white) !important;
+  font-weight: 500;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent-yellow) !important;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--white);
+  padding: 100px 0;
+  text-align: center;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 42, 77, 0.55); /* Blue overlay for text visibility */
+  z-index: 1;
+}
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .hero {
+    padding: 70px 20px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* ===== Cards (Features, Instructors, etc.) ===== */
+.card-custom {
+  background-color: var(--white);
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.card-custom:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+.card-custom img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.card-custom h5 {
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: 5px;
+}
+.card-custom p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* ===== Social Links ===== */
+.social-links a {
+  color: var(--accent-yellow);
+  font-size: 1.2rem;
+  margin: 0 5px;
+}
+.social-links a:hover {
+  color: var(--primary-blue);
+}
+
+/* ===== Fade-Up Animation ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+.fade-up.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 20px 0;
+}
+footer a {
+  color: var(--accent-yellow);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Blog card hover effects ===== */
+.card-img-top {
+  transition: transform 0.4s ease;
+}
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
