@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Processing & Windows - Course Outline</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: navy;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 40px;
+    }
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: yellow;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: yellow;
+    }
+
+    /* HERO */
+    .hero {
+      background: url('images/office-bg.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,64,0.7);
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      position: relative;
+      z-index: 1;
+      color: yellow;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* CONTENT */
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .container h2 {
+      color: navy;
+      border-left: 5px solid yellow;
+      padding-left: 10px;
+    }
+    ul {
+      margin-left: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: navy;
+      color: white;
+      padding: 40px 20px;
+      margin-top: 40px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+    .footer-grid h3 {
+      color: yellow;
+      margin-bottom: 15px;
+    }
+    .footer-grid ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-grid ul li {
+      margin-bottom: 8px;
+    }
+    .footer-grid ul li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-grid ul li a:hover {
+      color: yellow;
+    }
+    .copyright {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      border-top: 1px solid #555;
+      padding-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">
+     <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo.png" alt="Youngtec Logo" width="100" class="me-2">
+      </a> 
+    </div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="courseware.html">Courseware</a></li>
+      <li><a href="academics.html">Academics</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Word Processing & Windows</h1>
+    <p>Master Microsoft Word, Windows basics, and document formatting skills</p>
+  </section>
+
+  <!-- CONTENT -->
+  <div class="container">
+    <h2>Course Overview</h2>
+    <p>This course introduces students to essential word processing and Windows operating system skills. Participants will learn to create, edit, format, and manage professional documents while becoming confident in Windows navigation.</p>
+
+    <h2>Objectives</h2>
+    <ul>
+      <li>Understand the Windows operating environment</li>
+      <li>Create and manage documents with Microsoft Word</li>
+      <li>Format text, tables, and layouts</li>
+      <li>Use editing and proofing tools effectively</li>
+      <li>Prepare documents for printing and sharing</li>
+    </ul>
+
+    <h2>Course Outline</h2>
+    <ul>
+      <li>Module 1: Introduction to Windows Environment</li>
+      <li>Module 2: Getting Started with Word Processing</li>
+      <li>Module 3: Formatting and Styles</li>
+      <li>Module 4: Working with Tables and Graphics</li>
+      <li>Module 5: Proofing and Reviewing Documents</li>
+      <li>Module 6: Printing and File Management</li>
+    </ul>
+
+    <h2>Duration</h2>
+    <p>4 Weeks (12 sessions)</p>
+
+    <h2>Who Can Apply</h2>
+    <p>Beginners, office workers, students, and professionals seeking essential computer skills.</p>
+
+    <h2>What You'll Gain</h2>
+    <p>Practical word processing skills, confidence in document creation, and improved efficiency in office tasks.</p>
+
+    <h2>Career Opportunities</h2>
+    <ul>
+      <li>Administrative Assistant</li>
+      <li>Office Clerk</li>
+      <li>Secretary</li>
+      <li>Document Specialist</li>
+    </ul>
+
+    <h2>Tuition</h2>
+    <p>₦45,000</p>
+
+    <h2>Registration Fee</h2>
+    <p>₦5,000</p>
+
+    <p><a href="enroll.html" style="background: yellow; color: navy; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Apply Now</a></p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>About Youngtec</h3>
+        <p>Youngtec Computers is committed to empowering individuals with digital, technical, and professional skills for a brighter future.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="courseware.html">Courseware</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="workshops.html">Workshops</a></li>
+          <li><a href="course-career.html">Career</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/groups/148103598674098">Facebook</a></li>
+          <li><a href="https://x.com/YoungtecCom/status/1958753041932271717">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 1998-2025 Youngtec Computers. All Rights Reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

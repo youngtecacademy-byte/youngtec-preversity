@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Search | Youngtec Computers Academy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    /* NAVTOP */
+    nav {
+      background: #0a3d62;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+    nav .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 15px;
+      position: relative;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav ul li:hover > ul {
+      display: block;
+    }
+    nav ul ul {
+      display: none;
+      position: absolute;
+      background: #1e5c8b;
+      top: 30px;
+      left: 0;
+      list-style: none;
+      padding: 10px 0;
+      border-radius: 4px;
+    }
+    nav ul ul li {
+      margin: 0;
+      padding: 5px 15px;
+    }
+    nav ul ul li a {
+      color: #fff;
+    }
+    /* Search Section */
+    .search-container {
+      text-align: center;
+      padding: 60px 20px;
+      background: #dff9fb;
+    }
+    .search-container h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #0a3d62;
+    }
+    .search-box {
+      width: 60%;
+      max-width: 600px;
+      padding: 15px;
+      font-size: 18px;
+      border: 2px solid #0a3d62;
+      border-radius: 8px;
+      outline: none;
+    }
+    .dropdown-results {
+      width: 60%;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+      position: relative;
+    }
+    .dropdown-item {
+      background: white;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .dropdown-item:hover {
+      background: #f1f1f1;
+    }
+    .hidden {
+      display: none;
+    }
+    /* Footer */
+    footer {
+      background: #0a3d62;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 50px;
+    }
+    footer .footer-links {
+      margin-bottom: 15px;
+    }
+    footer .footer-links a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">Youngtec Computers</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li>
+        <a href="courses.html">Courses ▼</a>
+        <ul>
+          <li><a href="python-course.html">Python</a></li>
+          <li><a href="graphics-design-details.html">Graphic Design</a></li>
+          <li><a href="office-windows-outline.html">Office Suite</a></li>
+        </ul>
+      </li>
+      <li><a href="admission.html">Admissions</a></li>
+      <li><a href="student-portal.html">Student Portal</a></li>
+      <li>
+        <a href="e-library.html">E-Library ▼</a>
+        <ul>
+          <li><a href="digitalbooks.html">Digital Books</a></li>
+          <li><a href="journals.html">Journals</a></li>
+        </ul>
+      </li>
+      <li><a href="blog.html">Blog / News</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Search Section -->
+  <section class="search-container">
+    <h1>Search the Academy Website</h1>
+    <input type="text" id="searchBox" class="search-box" placeholder="Type to search...">
+    <div id="dropdownResults" class="dropdown-results hidden"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a> |
+      <a href="about.html">About Us</a> |
+      <a href="courses.html">Courses</a> |
+      <a href="smartexamsuite.html">SmartExam Suite</a> |
+      <a href="e-library.html">E-Library</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>© 2025 Youngtec Computers Academy. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // STEP 1: Automatically INDEX all HTML files in the site
+    // (In practice, maintain a "sitemap.json" listing all your .html pages)
+    const sitePages = [
+      { title: "Home", url: "index.html" },
+      { title: "About Us", url: "about.html" },
+      { title: "Courses", url: "courses.html" },
+      { title: "Python Course", url: "python-details.html" },
+      { title: "Graphic Design Course", url: "graphic-design-details.html" },
+      { title: "Office Suite Course", url: "office-suite-details.html" },
+      { title: "Admissions", url: "admission.html" },
+      { title: "Student Portal", url: "student-portal.html" },
+      { title: "E-Library", url: "e-library.html" },
+      { title: "Digital Books", url: "digitalbooks.html" },
+      { title: "Journals", url: "journals.html" },
+      { title: "Blog / News", url: "blog.html" },
+      { title: "Events", url: "events.html" },
+      { title: "Contact", url: "contact.html" }
+    ];
+
+    const searchBox = document.getElementById("searchBox");
+    const dropdownResults = document.getElementById("dropdownResults");
+
+    // STEP 2: Live search with dropdown list
+    searchBox.addEventListener("keyup", function() {
+      const query = this.value.toLowerCase();
+      dropdownResults.innerHTML = "";
+      if (query.length > 1) {
+        const filtered = sitePages.filter(page =>
+          page.title.toLowerCase().includes(query)
+        );
+
+        if (filtered.length > 0) {
+          dropdownResults.classList.remove("hidden");
+          filtered.forEach(page => {
+            const item = document.createElement("div");
+            item.classList.add("dropdown-item");
+            item.textContent = page.title;
+            item.addEventListener("click", () => {
+              window.location.href = page.url;
+            });
+            dropdownResults.appendChild(item);
+          });
+        } else {
+          dropdownResults.classList.add("hidden");
+        }
+      } else {
+        dropdownResults.classList.add("hidden");
+      }
+    });
+  </script>
+</body>
+</html>

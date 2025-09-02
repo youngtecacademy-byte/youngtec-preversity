@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>School of Engineering | Youngtec Computers Academy</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+    }
+    .navbar {
+      background-color: rgba(10, 42, 77, 0.85);
+    }
+    .hero {
+      background: url('images/laptop_repair4.jpeg') center/cover no-repeat;
+      height: 60vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 42, 77, 0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    .course-card {
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .course-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: #0A2A4D;
+      color: #fff;
+      padding: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Youngtec Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span data-feather="menu"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="courseware.html">Courseware</a></li>
+          <li class="nav-item"><a class="nav-link active" href="school-engineering.html">Engineering</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content container">
+      <h1>School of Engineering</h1>
+      <p>Master the technical skills to build, repair, and innovate in the world of engineering.</p>
+      <a href="enroll.html" class="btn btn-primary btn-lg mt-3">Enroll Now</a>
+    </div>
+  </section>
+
+  <!-- Intro Overview -->
+  <section class="py-5 text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Explore Our Engineering Courses</h2>
+      <p class="text-muted">From hardware repair to software systems and procurement expertise—find a path that drives your career forward.</p>
+    </div>
+  </section>
+
+  <!-- Courses Grid -->
+  <section class="py-3 bg-light">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Course Card Template -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card course-card h-100">
+            <img src="images/desktop_repair.jpeg" class="card-img-top" alt="Hardware Engineering">
+            <div class="card-body">
+              <h5 class="card-title">Hardware Engineering</h5>
+              <p class="card-text">Understand electronic components, circuitry, and device assembly.</p>
+              <a href="hardware-engineering.html" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repeat course cards similarly -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card course-card h-100">
+            <img src="images/software_bootable.jpeg" class="card-img-top" alt="Software Engineering">
+            <div class="card-body">
+              <h5 class="card-title">Software Engineering</h5>
+              <p class="card-text">Master programming fundamentals, system architecture, and app development.</p>
+              <a href="software-engineering.html" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card course-card h-100">
+            <img src="images/laptop_repair8.jpeg" class="card-img-top" alt="Laptop Repair">
+            <div class="card-body">
+              <h5 class="card-title">Laptop Repair</h5>
+              <p class="card-text">Diagnose and repair laptops—hardware, software, and maintenance.</p>
+              <a href="laptop-repair.html" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card course-card h-100">
+            <img src="images/desktop_case1.jpeg" class="card-img-top" alt="Desktop Repair">
+            <div class="card-body">
+              <h5 class="card-title">Desktop Repair</h5>
+              <p class="card-text">Fix desktops from power issues to component upgrades and diagnostics.</p>
+              <a href="desktop-repair.html" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card course-card h-100">
+            <img src="images/laptop_repair9.jpeg" class="card-img-top" alt="Procurement Skills">
+            <div class="card-body">
+              <h5 class="card-title">Laptop & Desktop Procurement</h5>
+              <p class="card-text">Learn how to source, procure, and manage IT inventory effectively.</p>
+              <a href="procurement-skills.html" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card course-card h-100">
+            <img src="images/laptop_repair5.jpeg" class="card-img-top" alt="Advanced Engineering">
+            <div class="card-body">
+              <h5 class="card-title">Advanced Engineering</h5>
+              <p class="card-text">Deep dive into advanced topics like automation, robotics, and system design.</p>
+              <a href="advanced-engineering.html" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2025 Youngtec Computers Academy – School of Engineering</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

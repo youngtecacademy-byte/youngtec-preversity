@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Programming Essentials - Hackathon Bootcamp</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: #222;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ffcc00;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      margin-left: 20px;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .navbar ul li a:hover {
+      color: #ffcc00;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/workshop2.jpg') center/cover no-repeat;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 800px;
+    }
+
+    /* Main Content */
+    .content {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .content h2 {
+      color: #222;
+      margin-top: 30px;
+      border-left: 4px solid #ffcc00;
+      padding-left: 10px;
+    }
+
+    .content ul {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+
+    .highlight {
+      background: #fffae6;
+      padding: 15px;
+      border-left: 5px solid #ffcc00;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+
+    /* Footer */
+    .footer {
+      background: #222;
+      color: #fff;
+      padding: 40px 20px;
+      margin-top: 50px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .footer h3 {
+      color: #ffcc00;
+      margin-bottom: 15px;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer ul li a:hover {
+      color: #ffcc00;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid #444;
+      padding-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Hackathon Bootcamp</div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="courseware.html">Courseware</a></li>
+      <li><a href="academics.html">Academics</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Python Programming Essentials</h1>
+    <p>Master Python for automation, data analysis, and AI projects with real-world applications. Perfect for beginners and professionals.</p>
+  </section>
+
+  <!-- Main Content -->
+  <section class="content">
+    <h2>Course Overview</h2>
+    <p>This bootcamp provides a solid foundation in Python programming. From basic syntax to real-world projects, you’ll gain hands-on experience in data handling, automation, and AI applications.</p>
+
+    <h2>Objectives</h2>
+    <ul>
+      <li>Understand Python syntax and structure.</li>
+      <li>Work with data types, loops, and functions.</li>
+      <li>Build automation scripts and mini-projects.</li>
+      <li>Explore data analysis with libraries like Pandas.</li>
+      <li>Introduction to AI and machine learning concepts.</li>
+    </ul>
+
+    <h2>Course Outline</h2>
+    <ul>
+      <li>Module 1: Python Basics</li>
+      <li>Module 2: Data Structures & Functions</li>
+      <li>Module 3: File Handling & Automation</li>
+      <li>Module 4: Data Analysis with Pandas</li>
+      <li>Module 5: Intro to AI & Machine Learning</li>
+    </ul>
+
+    <h2>Duration</h2>
+    <p>8 Weeks (Weekends / Flexible Online Learning).</p>
+
+    <h2>Who Can Apply</h2>
+    <p>Beginners, professionals, students, and anyone eager to master Python for technology, business, or research.</p>
+
+    <h2>What You'll Gain</h2>
+    <ul>
+      <li>Hands-on coding experience.</li>
+      <li>Confidence to build Python projects.</li>
+      <li>Strong foundation for AI and Data Science.</li>
+    </ul>
+
+    <h2>Career Opportunities</h2>
+    <p>Python Developer, Data Analyst, Machine Learning Engineer, Software Engineer, Automation Specialist.</p>
+
+    <div class="highlight">
+      <h2>Tuition & Registration</h2>
+      <p><strong>Tuition:</strong> ₦180,000 <br>
+         <strong>Registration Fee:</strong> ₦10,000</p>
+      <a href="enroll.html" style="background:#ffcc00; padding:10px 20px; border-radius:5px; color:#222; text-decoration:none; font-weight:bold;">Apply Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <h3>About Hackathon Bootcamp</h3>
+        <p>Empowering learners with practical coding, AI, and technology bootcamps designed to transform ideas into skills.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="courseware.html">Courseware</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="workshop1.html">Beginner Coding Bootcamp</a></li>
+          <li><a href="workshop2.html">Python Essentials</a></li>
+          <li><a href="ai-education.html">AI & Machine Learning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/groups/148103598674098">Facebook</a></li>
+          <li><a href="https://x.com/YoungtecCom/status/1958753041932271717">Twitter</a></li>
+          <li><a href="https://prudentamos.github.io/student--results/">Youngtec High Schools</a></li>
+          <li><a href="https://www.youtube.com/channel/UCnTxdNg7JVQakexncCTgUYA">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Hackathon Bootcamp. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

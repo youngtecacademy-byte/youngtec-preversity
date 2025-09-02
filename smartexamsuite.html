@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartExam Suite - Packages</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-4 sticky top-0 shadow-lg z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">SmartExam Suite</h1>
+      <ul class="flex space-x-6 text-lg">
+        <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+        <li><a href="packages.html" class="hover:text-yellow-300 font-semibold">Packages</a></li>
+        <li><a href="purchase.html" class="hover:text-yellow-300">Purchase</a></li>
+        <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-yellow-100 via-white to-indigo-100 py-20 text-center">
+    <h1 class="text-5xl md:text-7xl font-extrabold text-indigo-700 drop-shadow-lg">SmartExam Suite</h1>
+    <p class="mt-4 text-lg md:text-2xl text-gray-700 font-medium">Empowering Schools & Institutions with Modern CBT Solutions</p>
+  </section>
+
+  <!-- Packages Section -->
+  <section class="container mx-auto py-16 px-4">
+    <h2 class="text-3xl font-bold text-center text-indigo-700 mb-12">Choose Your Package</h2>
+
+    <div class="grid gap-12 md:grid-cols-3">
+      <!-- Basic CBT Edition -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+        <img src="images/basic-cbt.jpg" alt="Basic CBT Edition" class="rounded-xl mb-4">
+        <h3 class="text-xl font-semibold text-indigo-600">Basic CBT Edition</h3>
+        <p class="mt-2 text-gray-600">Perfect for small schools & training centers. Includes essential CBT features like question banks, timed tests, and auto-grading.</p>
+      </div>
+
+      <!-- Personalized Edition -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+        <img src="images/personalized.jpg" alt="Personalized Edition" class="rounded-xl mb-4">
+        <h3 class="text-xl font-semibold text-indigo-600">Personalized Edition</h3>
+        <p class="mt-2 text-gray-600">Customized branding, student logins, and advanced analytics. Tailored for medium schools seeking identity & control.</p>
+      </div>
+
+      <!-- Executive Custom Edition -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+        <img src="images/enterprise.jpg" alt="Executive Custom Edition" class="rounded-xl mb-4">
+        <h3 class="text-xl font-semibold text-indigo-600">Enterprise Custom Edition</h3>
+        <p class="mt-2 text-gray-600">Enterprise-level CBT with multi-school support, deep analytics, AI insights, and premium support for executives.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compare & Contrast Section -->
+  <section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-indigo-700 mb-8">Compare Packages</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full border border-gray-300 bg-white rounded-lg shadow-lg">
+          <thead class="bg-indigo-600 text-white">
+            <tr>
+              <th class="py-3 px-6 text-left">Features</th>
+              <th class="py-3 px-6">Basic</th>
+              <th class="py-3 px-6">Personalized</th>
+              <th class="py-3 px-6">Enterprise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b">
+              <td class="py-4 px-6">Question Bank</td>
+              <td class="text-center">✔</td>
+              <td class="text-center">✔</td>
+              <td class="text-center">✔</td>
+            </tr>
+            <tr class="border-b">
+              <td class="py-4 px-6">Custom Branding</td>
+              <td class="text-center">✖</td>
+              <td class="text-center">✔</td>
+              <td class="text-center">✔</td>
+            </tr>
+            <tr class="border-b">
+              <td class="py-4 px-6">Advanced Analytics</td>
+              <td class="text-center">✖</td>
+              <td class="text-center">✔</td>
+              <td class="text-center">✔</td>
+            </tr>
+            <tr class="border-b">
+              <td class="py-4 px-6">Multi-School Support</td>
+              <td class="text-center">✖</td>
+              <td class="text-center">✖</td>
+              <td class="text-center">✔</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6">Premium Support</td>
+              <td class="text-center">✖</td>
+              <td class="text-center">✔</td>
+              <td class="text-center">✔</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing & Purchase Section -->
+  <section class="container mx-auto py-16 px-4 text-center">
+    <h2 class="text-3xl font-bold text-indigo-700 mb-8">Pricing & Purchase</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Basic -->
+      <div class="bg-white shadow-lg rounded-2xl p-8 border-t-8 border-indigo-400">
+        <h3 class="text-xl font-bold text-indigo-600">Basic CBT Edition</h3>
+        <p class="text-3xl font-extrabold my-4">₦50,000</p>
+        <p class="mb-4 text-gray-600">Best for small schools</p>
+        <button class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-800 transition"><a href="purchase.html" class="hover:text-yellow-300">Purchase Now</a></button>
+      </div>
+      <!-- Personalized -->
+      <div class="bg-white shadow-lg rounded-2xl p-8 border-t-8 border-purple-400">
+        <h3 class="text-xl font-bold text-purple-600">Personalized Edition</h3>
+        <p class="text-3xl font-extrabold my-4">₦120,000</p>
+        <p class="mb-4 text-gray-600">Best for medium schools</p>
+        <button class="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-800 transition"><a href="purchase.html" class="hover:text-yellow-300">Purchase Now</a></button>
+      </div>
+      <!-- Executive -->
+      <div class="bg-white shadow-lg rounded-2xl p-8 border-t-8 border-yellow-400">
+        <h3 class="text-xl font-bold text-yellow-600">Executive Custom Edition</h3>
+        <p class="text-3xl font-extrabold my-4">₦250,000</p>
+        <p class="mb-4 text-gray-600">Best for institutions & enterprises</p>
+        <button class="bg-yellow-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition" ><a href="purchase.html" class="hover:text-yellow-300">Purchase Now</a></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-700 text-white py-6 mt-12">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 SmartExam Suite by Youngtec. All Rights Reserved.</p>
+      <div class="flex justify-center space-x-4 mt-2">
+        <i data-feather="facebook" class="w-6 h-6"></i>
+        <i data-feather="twitter" class="w-6 h-6"></i>
+        <i data-feather="linkedin" class="w-6 h-6"></i>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    feather.replace()
+  </script>
+</body>
+</html>

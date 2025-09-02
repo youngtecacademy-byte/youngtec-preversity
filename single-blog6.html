@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Behind the Scene: Taking a Closer Look at Technology - Youngtec Computers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+    }
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: navy;
+      color: white;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: yellow;
+    }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .navbar ul li a:hover {
+      color: yellow;
+    }
+    /* Hero */
+    .hero {
+      background: linear-gradient(to right, rgb(16, 16, 145), rgb(50, 50, 173));
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 18px;
+    }
+    /* Content */
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: navy;
+      margin-top: 30px;
+    }
+    .scholarship-tier {
+      border: 2px solid navy;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      background: #f1f6ff;
+    }
+    .scholarship-tier h3 {
+      margin: 0;
+      color: darkblue;
+    }
+    .scholarship-tier p {
+      margin: 5px 0;
+    }
+    /* Form */
+    form {
+      margin-top: 30px;
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    form button {
+      background: navy;
+      color: yellow;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: darkblue;
+    }
+    /* Share buttons */
+    .share {
+      margin: 30px 0;
+    }
+    .share button {
+      margin-right: 10px;
+      background: navy;
+      color: yellow;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .share button:hover {
+      background: darkblue;
+    }
+    /* Progress bar */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 5px;
+      background: yellow;
+      z-index: 2000;
+    }
+    /* Footer */
+    .footer {
+      background: navy;
+      color: white;
+      padding: 40px 20px;
+      margin-top: 50px;
+      text-align: center;
+    }
+    .footer p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="progress-bar"></div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Youngtec Computers</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="hot-courses.html">Courses</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="downloads.html">Downloads</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Behind the Scene: Taking a Closer Look at Technology</h1>
+    <p>Youngtec Computers Scholarship Program – Supporting Public School Students in Nigeria</p>
+  </section>
+
+  <!-- Content -->
+  <div class="container">
+    <p>
+      The Youngtec Computers Scholarship Program is an initiative designed to empower young people in public schools across Nigeria to pursue careers in Information Technology.  
+      Through this program, students aged 11 to 20 are given the opportunity to join our academy and receive practical training to prepare for a successful future in tech.
+    </p>
+    <p>
+      We hold three training orientations each year where students are introduced to technology careers, digital literacy, and coding. Winners of the scholarship will learn **FREE of charge** at Youngtec Computers Academy.
+    </p>
+
+    <h2>Scholarship Opportunities</h2>
+
+    <div class="scholarship-tier">
+      <h3>🏆 First Prize</h3>
+      <p>Full scholarship covering all training programs at Youngtec Computers Academy, including mentorship and career guidance.</p>
+    </div>
+
+    <div class="scholarship-tier">
+      <h3>🥈 Second Prize</h3>
+      <p>75% scholarship covering most of the tuition with access to specialized workshops and digital safety programs.</p>
+    </div>
+
+    <div class="scholarship-tier">
+      <h3>🥉 Third Prize</h3>
+      <p>50% scholarship and access to select courses, ensuring affordability for motivated students who want to pursue IT careers.</p>
+    </div>
+
+    <h2>Apply for the Youngtec Scholarship</h2>
+    <form action="https://formspree.io/f/xzzvqdrn" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="text" name="age" placeholder="Age" required>
+      <input type="text" name="school" placeholder="School Name" required>
+      <textarea name="message" rows="5" placeholder="Why do you want this scholarship?" required></textarea>
+      <button type="submit">Apply for Scholarship</button>
+    </form>
+
+    <div class="share">
+      <h2>Share this Program</h2>
+      <button onclick="share('facebook')">Facebook</button>
+      <button onclick="share('twitter')">Twitter</button>
+      <button onclick="share('linkedin')">LinkedIn</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Youngtec Computers. All Rights Reserved.</p>
+    <p>Empowering the Next Generation of Tech Leaders in Nigeria</p>
+  </footer>
+
+  <script>
+    // Progress bar
+    window.onscroll = function() {
+      let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrolled = (winScroll / height) * 100;
+      document.getElementById("progress-bar").style.width = scrolled + "%";
+    };
+
+    // Share buttons
+    function share(platform) {
+      let url = window.location.href;
+      let text = "Check out the Youngtec Computers Scholarship Program!";
+      if(platform === 'facebook') {
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+      }
+      if(platform === 'twitter') {
+        window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+      }
+      if(platform === 'linkedin') {
+        window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${text}`, '_blank');
+      }
+    }
+  </script>
+</body>
+</html>

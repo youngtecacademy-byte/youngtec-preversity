@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Quality Assurance - Youngtec Computers Academy</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .hero {
+      position: relative;
+      background: url('images/qr-hero.jpeg') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 50, 0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #FFD700;
+    }
+    .section-title {
+      color: #002147;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .card-highlight {
+      transition: transform 0.3s;
+    }
+    .card-highlight:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    footer {
+      background-color: #002147;
+      color: #fff;
+      padding: 40px 0;
+    }
+    footer a {
+      color: #FFD700;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#002147;">
+    <div class="container">
+      <a class="navbar-brand" href="home.html">
+        <img src="images/logo.png" alt="Youngtec Logo" width="100" class="me-2">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="courseware.html">Courseware</a></li>
+          <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
+          <li class="nav-item"><a class="nav-link" href="course-career.html">Career</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Software Quality Assurance</h1>
+      <p>Ensuring Excellence in Every Line of Code</p>
+    </div>
+  </section>
+
+  <div class="container py-5">
+
+    <!-- Overview -->
+    <h2 class="section-title">Course Overview</h2>
+    <p class="text-center">The Software Quality Assurance (QA) course equips you with the tools and mindset to ensure that every product meets the highest standards. Learn industry-leading testing practices, automation tools, and QA methodologies to deliver reliable, user-friendly, and scalable software solutions.</p>
+
+    <!-- Objectives -->
+    <h2 class="section-title">Objectives</h2>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="card card-highlight p-3">
+          <img src="images/bug-hunt.png" class="card-img-top w-50 mx-auto" alt="Bug Tracking">
+          <div class="card-body">
+            <h5>Identify & Fix Bugs</h5>
+            <p>Master techniques to track, analyze, and resolve defects effectively.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-highlight p-3">
+          <img src="images/automation.png" class="card-img-top w-50 mx-auto" alt="Automation Testing">
+          <div class="card-body">
+            <h5>Automation Mastery</h5>
+            <p>Gain hands-on skills in automation frameworks and tools like Selenium.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-highlight p-3">
+          <img src="images/qa-standards.png" class="card-img-top w-50 mx-auto" alt="QA Standards">
+          <div class="card-body">
+            <h5>Quality Standards</h5>
+            <p>Understand QA methodologies such as Agile, Scrum, and DevOps QA.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Outline -->
+    <h2 class="section-title">Course Outline</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Module 1: Introduction to QA & SDLC</li>
+      <li class="list-group-item">Module 2: Manual Testing Fundamentals</li>
+      <li class="list-group-item">Module 3: Automation Testing with Selenium</li>
+      <li class="list-group-item">Module 4: API & Performance Testing</li>
+      <li class="list-group-item">Module 5: QA in Agile & DevOps</li>
+      <li class="list-group-item">Module 6: Capstone QA Project</li>
+    </ul>
+
+    <!-- Duration -->
+    <h2 class="section-title">Duration</h2>
+    <p class="text-center">8 Weeks (Weekend and Evening Options Available)</p>
+
+    <!-- Who Can Apply -->
+    <h2 class="section-title">Who Can Apply</h2>
+    <p class="text-center">Aspiring software testers, developers, IT professionals, and students seeking a career in software testing and QA.</p>
+
+    <!-- What You'll Gain -->
+    <h2 class="section-title">What You'll Gain</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Practical hands-on testing experience</li>
+      <li class="list-group-item">Strong grasp of manual and automated testing</li>
+      <li class="list-group-item">Industry-relevant QA tools and techniques</li>
+      <li class="list-group-item">A professional QA portfolio project</li>
+    </ul>
+
+    <!-- Career Opportunities -->
+    <h2 class="section-title">Career Opportunities</h2>
+    <p class="text-center">Graduates can pursue roles such as Software QA Engineer, Automation Tester, Test Analyst, or QA Lead in tech firms, startups, and enterprise organizations.</p>
+
+    <!-- Tuition & Fees -->
+    <h2 class="section-title">Tuition & Fees</h2>
+    <p class="text-center"><strong>Tuition:</strong> NGN 224,000 <br> <strong>Registration Fee:</strong> NGN 10,000</p>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>About Us</h5>
+          <p>Youngtec Computers Academy is dedicated to equipping students with future-ready technology skills in software, design, and innovation.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="courseware.html">Courseware</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="apply.html">Apply</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Resources</h5>
+          <ul class="list-unstyled">
+            <li><a href="e-library.html">Library</a></li>
+            <li><a href="student-portal.html">Student Portal</a></li>
+            <li><a href="courseware.html">Courseware</a></li>
+            <li><a href="help-center.html">Help Center</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <p>&copy; 2025 Youngtec Computers Academy. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

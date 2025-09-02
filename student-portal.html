@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal | Youngtec Computers Academy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    /* Top Navigation */
+    nav {
+      background: navy;
+      padding: 12px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      color: yellow;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 25px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: yellow;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, navy, #1c3c84);
+      color: white;
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 18px;
+      margin-top: 10px;
+      color: #e4e4e4;
+    }
+
+    /* Portal Cards */
+    .portal-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .portal-card {
+      background: white;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .portal-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    .portal-card h3 {
+      color: navy;
+      margin-bottom: 12px;
+    }
+    .portal-card a {
+      text-decoration: none;
+      color: yellow;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background: navy;
+      color: white;
+      padding: 40px 20px;
+      margin-top: 40px;
+    }
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .footer-content h4 {
+      color: yellow;
+      margin-bottom: 12px;
+    }
+    .footer-content ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-content ul li {
+      margin-bottom: 8px;
+    }
+    .footer-content ul li a {
+      text-decoration: none;
+      color: #ddd;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+    .footer-content ul li a:hover {
+      color: yellow;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Youngtec Academy</div>
+    <ul>
+      <li><a href="student-portal.html">Dashboard</a></li>
+      <li><a href="my-courses.html">Courses</a></li>
+      <li><a href="messages.html">Messages</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="logout.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Welcome to Your Student Portal</h1>
+    <p>Manage your courses, assignments, payments, and more in one place.</p>
+  </section>
+
+  <!-- Portal Links -->
+  <section class="portal-links">
+    <div class="portal-card">
+      <h3>📚 My Courses</h3>
+      <p>View and continue your enrolled courses anytime.</p>
+      <a href="my-courses.html">Go to My Courses →</a>
+    </div>
+    <div class="portal-card">
+      <h3>📝 Assignments</h3>
+      <p>Track your pending and submitted assignments.</p>
+      <a href="assignments.html">Check Assignments →</a>
+    </div>
+    <div class="portal-card">
+      <h3>💬 Messages</h3>
+      <p>Communicate with instructors and peers.</p>
+      <a href="messages.html">Open Messages →</a>
+    </div>
+    <div class="portal-card">
+      <h3>💳 Payments</h3>
+      <p>Check fees, transactions, and payment history.</p>
+      <a href="payments.html">View Payments →</a>
+    </div>
+    <div class="portal-card">
+      <h3>📊 Results</h3>
+      <p>Access your test scores and grades securely.</p>
+      <a href="results.html">View Results →</a>
+    </div>
+    <div class="portal-card">
+      <h3>🔔 Notifications</h3>
+      <p>Stay updated with important news and alerts.</p>
+      <a href="notifications.html">View Notifications →</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h4>About Us</h4>
+        <p>Youngtec Computers Academy provides world-class IT training, empowering students with skills for the digital future.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="course-details1.html">Courses</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="downloads.html">Learning Materials</a></li>
+          <li><a href="workshops.html">Workshops</a></li>
+          <li><a href="courseware.html">Courseware</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/groups/148103598674098">Facebook</a></li>
+          <li><a href="https://x.com/YoungtecCom/status/1958753041932271717">Twitter</a></li>
+          <li><a href="https://api.whatsapp.com/send/?phone=2348163860415&text&type=phone_number&app_absent=0">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Youngtec Computers Academy. All Rights Reserved.
+    </div>
+  </footer>
+  <!-- Live Support Widget -->
+  <div class="support-widget">
+    <a href="https://wa.me/2348163860415" target="_blank" title="WhatsApp Support"><i class="bi bi-whatsapp"></i></a>
+    <a href="tel:+2348163860415" class="call" title="Call Support"><i class="bi bi-telephone"></i></a>
+  </div>
+
+</body>
+</html>

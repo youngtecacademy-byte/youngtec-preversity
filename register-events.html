@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Register - Youngtec Computers Academy</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f8fb;
+      color: #333;
+    }
+
+    header {
+      background: navy;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    .form-container {
+      max-width: 650px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+
+    h1 {
+      text-align: center;
+      color: navy;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #004080;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: navy;
+      outline: none;
+      box-shadow: 0 0 6px rgba(0,0,128,0.2);
+    }
+
+    button {
+      width: 100%;
+      padding: 16px;
+      background: #FFD700;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background: #e6c200;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      margin-top: 60px;
+      background: navy;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Branding -->
+  <header>
+    <img src="images/logo.png" alt="Youngtec Computers Academy Logo">
+  </header>
+
+  <!-- Registration Form -->
+  <div class="form-container">
+    <h1>Event Registration</h1>
+    <form action="https://formspree.io/f/xzzvqdrn" method="POST">
+      <!-- Redirect to success.html after submission -->
+      <input type="hidden" name="_redirect" value="success.html">
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+      <label for="event">Select Event</label>
+      <select id="event" name="event" required>
+        <option value="">-- Choose an Event --</option>
+        <option value="Youngtec Hackathon">Youngtec Hackathon</option>
+        <option value="AI & Machine Learning Bootcamp">AI & Machine Learning Bootcamp</option>
+        <option value="Digital Marketing for Tech Professionals">Digital Marketing for Tech Professionals</option>
+        <option value="Web Development Marathon">Web Development Marathon</option>
+        <option value="Youngtec Developers Week">Youngtec Developers Week</option>
+        <option value="Digital Innovation for the Next Generation">Digital Innovation for the Next Generation</option>
+      </select>
+
+      <label for="message">Additional Information</label>
+      <textarea id="message" name="message" rows="4" placeholder="Tell us more (optional)"></textarea>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 1998–2026 Youngtec Computers Academy. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

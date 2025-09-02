@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School of Office Applications | Youngtec Computers</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(to right, #01264d, #236ec4);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero */
+    .hero {
+      background: url('images/office-apps.jpg') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .hero h1, .hero p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+    }
+
+    /* Courses Section */
+    .courses {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .courses h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #0056b3;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .course-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .course-card h3 {
+      color: #0077b6;
+      margin-bottom: 10px;
+    }
+
+    .course-card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #0056b3;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .course-card a:hover {
+      background: #00b4d8;
+    }
+
+    /* Footer */
+    .footer {
+      background: #003049;
+      color: #fff;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+
+    .footer h4 {
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+      border-bottom: 2px solid #00b4d8;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .footer a {
+      display: block;
+      color: #ddd;
+      text-decoration: none;
+      margin-bottom: 8px;
+    }
+
+    .footer a:hover {
+      color: #00b4d8;
+    }
+
+    .footer .brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="brand"><a class="navbar-brand" href="home.html">
+        <img src="images/logo.png" alt="Youngtec Logo" width="100" class="me-2">
+      </a>
+    </div>
+    <div>
+      <a href="home.html">Home</a>
+      <a href="courseware.html">Courseware</a>
+      <a href="academics.html">Academics</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>School of Office Applications</h1>
+    <p>Master essential digital skills for productivity and business success</p>
+  </section>
+
+  <!-- Courses -->
+  <section class="courses">
+    <h2>Our Course Outlines</h2>
+    <div class="course-grid">
+      <div class="course-card">
+        <h3>Word Processing & Windows</h3>
+        <p>Learn to create, edit, and manage professional documents with efficiency.</p>
+        <a href="word-processing-outline.html">Learn More</a>
+      </div>
+      <div class="course-card">
+        <h3>Presentation Software</h3>
+        <p>Develop engaging presentations using powerful design and multimedia tools.</p>
+        <a href="presentation-outline.html">Learn More</a>
+      </div>
+      <div class="course-card">
+        <h3>Database Management Skills</h3>
+        <p>Understand how to manage, query, and organize databases effectively.</p>
+        <a href="database-outline.html">Learn More</a>
+      </div>
+      <div class="course-card">
+        <h3>Spreadsheet & Accounting Skills</h3>
+        <p>Master spreadsheets for analysis, finance, and professional reporting.</p>
+        <a href="spreadsheet-outline.html">Learn More</a>
+      </div>
+      <div class="course-card">
+        <h3>Office & Windows Operation</h3>
+        <p>Gain practical skills to navigate and optimize Microsoft Office and Windows.</p>
+        <a href="office-windows-outline.html">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div>
+      <h4>About Youngtec</h4>
+      <p>Youngtec Computers is dedicated to providing practical IT education and digital skills for the modern world.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="blog.html">Blog</a>
+      <a href="courseware.html">Courseware</a>
+      <a href="career-programs.html">Career Programs</a>
+      <a href="enroll.html">Take A Course</a>
+    </div>
+    <div>
+      <h4>Resources</h4>
+      <a href="downloads.html">Downloads</a>
+      <a href="tutorials.html">Tutorials</a>
+      <a href="workshops.html">Workshops</a>
+      <a href="community.html">Community</a>
+    </div>
+    <div>
+      <h4>Follow Us</h4>
+      <a href="https://www.facebook.com/groups/148103598674098">Facebook</a>
+      <a href="https://x.com/YoungtecCom/status/1958753041932271717">Twitter</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">YouTube</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youngtec Computers - Store</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    /* Navbar */
+    .navbar {
+      background: #001f3f;
+    }
+    .navbar .nav-link {
+      color: #fff !important;
+      margin-right: 15px;
+    }
+    .navbar .nav-link:hover {
+      color: #ffcc00 !important;
+    }
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    .navbar-brand span {
+      color: #ffcc00;
+      font-weight: bold;
+    }
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(0,31,63,0.8), rgba(0,31,63,0.8)), url('images/workshop1.jpg') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .hero .btn {
+      background: #ffcc00;
+      color: #001f3f;
+      font-weight: bold;
+      border-radius: 6px;
+      padding: 10px 25px;
+    }
+    .hero .btn:hover {
+      background: #e6b800;
+    }
+    /* Cards */
+    .cards {
+      padding: 60px 20px;
+      background: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .cards .card {
+      flex: 1 1 300px;
+      background: #fff;
+      padding: 30px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .cards .card:hover {
+      transform: translateY(-10px);
+    }
+    .cards h2 {
+      color: #001f3f;
+      margin-bottom: 15px;
+    }
+    /* Section styles */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    section h2 {
+      color: #001f3f;
+      margin-bottom: 20px;
+    }
+    section p {
+      max-width: 800px;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+    section .btn {
+      background: #001f3f;
+      color: #ffcc00;
+      font-weight: bold;
+      padding: 10px 25px;
+      border-radius: 6px;
+    }
+    section .btn:hover {
+      background: #ffcc00;
+      color: #001f3f;
+    }
+    /* Contact Form */
+    .contact form {
+      max-width: 600px;
+      margin: auto;
+    }
+    .contact input, 
+    .contact textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .contact button {
+      background: #001f3f;
+      color: #ffcc00;
+      font-weight: bold;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+    }
+    .contact button:hover {
+      background: #ffcc00;
+      color: #001f3f;
+    }
+    /* Footer */
+    .footer {
+      background: #001f3f;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .footer .social a img {
+      height: 30px;
+      margin: 0 10px;
+      filter: brightness(0) invert(1);
+      transition: transform 0.3s;
+    }
+    .footer .social a img:hover {
+      transform: scale(1.1);
+      filter: invert(74%) sepia(96%) saturate(743%) hue-rotate(360deg) brightness(103%) contrast(105%);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo.png" alt="Youngtec Computers">
+        <span></span>
+      </a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span data-feather="menu"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="courseware.html">Courseware</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Empowering Digital Learning with Youngtec Computers</h1>
+      <p>Innovative IT training, solutions, and resources for schools and professionals.</p>
+      <a href="courseware.html" class="btn">Explore Courseware</a>
+    </div>
+  </section>
+
+  <!-- Cards -->
+  <section class="cards container">
+    <div class="card">
+      <h2>Quality Training</h2>
+      <p>We provide in-depth training in IT, programming, and professional skills.</p>
+    </div>
+    <div class="card">
+      <h2>Admin Tools</h2>
+      <p>Powerful administrative software tailored for schools and organizations.</p>
+    </div>
+    <div class="card">
+      <h2>Courseware Access</h2>
+      <p>Well-structured course materials accessible anytime, anywhere.</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Youngtec Computers is a hub for technology-driven education and training. We combine innovation with excellence to empower learners, schools, and professionals across diverse IT domains.</p>
+    </div>
+  </section>
+
+  <!-- Admin -->
+  <section id="admin" class="admin bg-light">
+    <div class="container">
+      <h2>State-of-the-Art Labs</h2>
+      <p>Login to access administrative resources and manage courseware.</p>
+      <a href="blog-post1.html" class="btn">Go to New Labs</a>
+    </div>
+  </section>
+
+  <!-- Courseware -->
+  <section id="courseware" class="courseware">
+    <div class="container">
+      <h2>Courseware</h2>
+      <p>Explore our range of IT courses including programming, multimedia, design, and office applications.</p>
+      <a href="hot-courses.html" class="btn">View Hot Courses</a>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="contact bg-light">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form action="https://formspree.io/f/xzzvqdrn" method="POST">
+        <input type="text" name="name" placeholder="Your Full Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="social mb-3">
+      <a href="https://www.facebook.com/groups/148103598674098"></a>
+      <a href="https://x.com/YoungtecCom/status/1958753041932271717"></a>
+      <a href="https://www.youtube.com/channel/UCnTxdNg7JVQakexncCTgUYA"></a>
+    </div>
+    <p>&copy; 1998-2025 Youngtec Computers. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full-Stack Web Development Bootcamp</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #070246;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header img {
+      height: 50px;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: url('images/workshop3.jpg') no-repeat center center/cover;
+      height: 65vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .hero h1, .hero p {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .container {
+      width: 90%;
+      margin: auto;
+      padding: 40px 0;
+    }
+    h2 {
+      color: #222;
+      margin-bottom: 10px;
+    }
+    ul {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+    .footer {
+      background: #070246;
+      color: #ccc;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .footer h3 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .footer a {
+      display: block;
+      color: #ccc;
+      text-decoration: none;
+      margin-bottom: 6px;
+    }
+    .footer a:hover {
+      color: #fff;
+    }
+    .copyright {
+      text-align: center;
+      padding: 15px;
+      background: #000;
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="images/logo.png" alt="Youngtec Logo">
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="Courseware.html">Courseware</a>
+      <a href="academics.html">Academics</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Hackathon Bootcamp</h1>
+    <p>Full-Stack Web Development: Build real-world apps like a pro</p>
+  </section>
+
+  <!-- Content -->
+  <div class="container">
+    <h2>Workshop Overview</h2>
+    <p>
+      The <strong>Full-Stack Web Development Bootcamp</strong> is designed to transform beginners into professional developers. 
+      Participants will master front-end and back-end technologies to build modern, scalable, and interactive applications.
+    </p>
+
+    <h2>Essential Features</h2>
+    <ul>
+      <li>Hands-on learning experience</li>
+      <li>Real-world projects and portfolio development</li>
+      <li>Expert mentorship and guidance</li>
+      <li>Access to career opportunities</li>
+    </ul>
+
+    <h2>Courses Covered</h2>
+    <ul>
+      <li>HTML5, CSS3, JavaScript (Front-end Basics)</li>
+      <li>React.js or Vue.js (Front-end Framework)</li>
+      <li>Node.js & Express.js (Back-end Development)</li>
+      <li>Databases: MongoDB & MySQL</li>
+      <li>Version Control with Git & GitHub</li>
+      <li>Deployment on the Cloud (Heroku, AWS, or Netlify)</li>
+    </ul>
+
+    <h2>Tuition & Registration</h2>
+    <p>
+      Tuition: <strong>₦250,000</strong> <br>
+      Registration Fee: <strong>₦10,000</strong> <br><br>
+       <a href="enroll.html" style="background:#ffcc00; padding:10px 20px; border-radius:5px; color:#222; text-decoration:none; font-weight:bold;">Apply Now</a>
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div>
+      <h3>About Youngtec</h3>
+      <p>Youngtec Computers Academy is committed to empowering individuals with technology skills for the future through bootcamps, workshops, and courses.</p>
+    </div>
+    <div>
+      <h3>Quick Links</h3>
+      <a href="Home.html">Home</a>
+      <a href="Courseware.html">Courseware</a>
+      <a href="academics.html">Academics</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+    <div>
+      <h3>Resources</h3>
+      <a href="workshops.html">Workshops</a>
+      <a href="e-library.html">E-library</a>
+      <a href="tuition.html">Tutorials</a>
+      <a href="community.html">Community</a>
+    </div>
+    <div>
+      <h3>Follow Us</h3>
+      <a href="https://www.facebook.com/groups/148103598674098">Facebook</a>
+      <a href="https://x.com/YoungtecCom/status/1958753041932271717">Twitter</a>
+      <a href="https://x.com/YoungtecCom/status/1958753041932271717">YouTube</a>
+      <a href="https://api.whatsapp.com/send/?phone=2348163860415&text&type=phone_number&app_absent=0">WhatsApp</a>
+    </div>
+  </footer>
+  <div class="copyright">
+    &copy; 1998-2025 Youngtec Computers. All rights reserved.
+  </div>
+</body>
+</html>
