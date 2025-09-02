@@ -1,0 +1,99 @@
+{
+  "faqs": [
+    {
+      "id": 1,
+      "question": "How do I log into the Student Portal?",
+      "answer": "Visit the login page, enter your registered email/username and password, then click 'Login'. If you encounter issues, use the 'Forgot Password' option."
+    },
+    {
+      "id": 2,
+      "question": "Can I change my course after registration?",
+      "answer": "Yes, you can request a course change by contacting the Academic Office within the first two weeks of the semester."
+    },
+    {
+      "id": 3,
+      "question": "Where can I download my results?",
+      "answer": "Your results will be available under the 'Results' tab in the Student Portal after they have been officially released."
+    },
+    {
+      "id": 4,
+      "question": "Is there a mobile app for the portal?",
+      "answer": "Currently, we are working on a mobile app. Meanwhile, you can access the portal through your mobile browser."
+    },
+    {
+      "id": 5,
+      "question": "How do I access the e-Library?",
+      "answer": "Simply log into the Student Portal, navigate to 'E-Library', and browse or search for available resources."
+    }
+  ],
+  "library": {
+    "categories": [
+      {
+        "id": "programming",
+        "name": "Programming",
+        "books": [
+          {
+            "id": "prog1",
+            "title": "Learning Python",
+            "author": "Mark Lutz",
+            "year": 2013,
+            "type": "ebook",
+            "file": "ebooks/learning-python.pdf"
+          },
+          {
+            "id": "prog2",
+            "title": "JavaScript: The Good Parts",
+            "author": "Douglas Crockford",
+            "year": 2008,
+            "type": "ebook",
+            "file": "ebooks/javascript-good-parts.pdf"
+          }
+        ]
+      },
+      {
+        "id": "design",
+        "name": "Design & Multimedia",
+        "books": [
+          {
+            "id": "design1",
+            "title": "The Non-Designer's Design Book",
+            "author": "Robin Williams",
+            "year": 2015,
+            "type": "ebook",
+            "file": "ebooks/non-designers-design-book.pdf"
+          },
+          {
+            "id": "design2",
+            "title": "Adobe Photoshop CC Classroom in a Book",
+            "author": "Andrew Faulkner",
+            "year": 2019,
+            "type": "ebook",
+            "file": "ebooks/photoshop-classroom.pdf"
+          }
+        ]
+      },
+      {
+        "id": "business",
+        "name": "Business & Finance",
+        "books": [
+          {
+            "id": "bus1",
+            "title": "Principles of Economics",
+            "author": "N. Gregory Mankiw",
+            "year": 2020,
+            "type": "ebook",
+            "file": "ebooks/principles-economics.pdf"
+          },
+          {
+            "id": "bus2",
+            "title": "Rich Dad Poor Dad",
+            "author": "Robert T. Kiyosaki",
+            "year": 1997,
+            "type": "ebook",
+            "file": "ebooks/rich-dad-poor-dad.pdf"
+          }
+        ]
+      }
+    ]
+  }
+}

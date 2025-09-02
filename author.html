@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Youngtec Books • Official Landing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    :root{
+      --brand:#0d47a1;        /* Deep blue */
+      --brand-2:#1565c0;      /* Lighter blue */
+      --accent:#ffd54f;       /* Warm accent */
+      --ink:#0f172a;          /* Slate-900 */
+      --muted:#475569;        /* Slate-600 */
+      --bg:#f8fafc;           /* Slate-50 */
+      --card:#ffffff;
+      --radius:14px;
+      --shadow:0 10px 30px rgba(2, 6, 23, .08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;background:var(--bg);color:var(--ink)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* NAVBAR */
+    .nav{position:sticky;top:0;z-index:50;background:var(--card);box-shadow:var(--shadow)}
+    .nav-inner{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 18px}
+    .brand{display:flex;gap:10px;align-items:center}
+    .brand-logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:#fff;font-weight:800}
+    .brand-name{font-weight:800;color:var(--brand);letter-spacing:.2px}
+    .menu{display:none;gap:22px;align-items:center}
+    .menu a{color:var(--muted);font-weight:600}
+    .menu a:hover{color:var(--brand)}
+    .cta{padding:10px 14px;border-radius:12px;background:var(--brand);color:#fff;font-weight:700}
+    .cta:hover{background:var(--brand-2)}
+    .hamburger{display:inline-flex;flex-direction:column;gap:4px;border:0;background:transparent}
+    .hamburger span{width:24px;height:2px;background:var(--ink)}
+    .mobile-panel{display:none;padding:10px 18px;border-top:1px solid #e2e8f0}
+    .mobile-panel a{display:block;padding:10px 0;color:var(--muted);font-weight:600}
+
+    /* HERO */
+    .hero{position:relative;isolation:isolate;background:linear-gradient(rgba(13,71,161,.92),rgba(21,101,192,.92)), url('https://images.unsplash.com/photo-1519682337058-a94d519337bc?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;color:#fff;padding:60px 18px}
+    .hero-inner{max-width:1100px;margin:auto;text-align:center}
+    .eyebrow{display:inline-block;background:rgba(255,255,255,.18);backdrop-filter:blur(4px);padding:6px 10px;border-radius:10px;font-size:12px;font-weight:700;letter-spacing:.6px}
+    .hero h1{font-size:34px;line-height:1.1;margin:16px 0 10px;font-weight:900}
+    .hero p{font-size:16px;opacity:.95;max-width:720px;margin:0 auto 20px}
+    .hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-block;padding:12px 18px;border-radius:12px;font-weight:800}
+    .btn-primary{background:#fff;color:var(--brand)}
+    .btn-primary:hover{background:#f1f5f9}
+    .btn-ghost{border:1.5px solid rgba(255,255,255,.6);color:#fff}
+
+    /* SECTION */
+    section{padding:42px 18px}
+    .section-inner{max-width:1200px;margin:auto}
+    .section-title{font-size:22px;color:var(--brand);font-weight:900;text-align:center;margin-bottom:22px}
+    .section-sub{color:var(--muted);text-align:center;margin:-10px auto 26px;max-width:760px}
+
+    /* CARD / SWIPER */
+    .swiper{padding:6px 6px 36px}
+    .book-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px;text-align:center;transition:transform .25s ease, box-shadow .25s ease}
+    .book-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(2,6,23,.12)}
+    .book-cover{height:260px;object-fit:cover;border-radius:10px;margin-bottom:12px}
+    .book-title{font-weight:800;margin:6px 0 2px}
+    .book-author{color:var(--muted);font-weight:600;font-size:14px;margin-bottom:10px}
+    .pill{display:inline-block;background:#eef2ff;color:#3730a3;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700;margin-bottom:10px}
+    .btn-buy{display:inline-block;background:var(--brand);color:#fff;padding:10px 14px;border-radius:12px;font-weight:800}
+    .btn-buy:hover{background:var(--brand-2)}
+
+    /* SELAR HOT */
+    .hot-grid{display:grid;grid-template-columns:1fr;gap:14px}
+    .hot-item{display:flex;gap:12px;background:var(--card);border-radius:12px;box-shadow:var(--shadow);padding:10px;align-items:center}
+    .hot-thumb{width:64px;height:84px;border-radius:8px;object-fit:cover}
+    .hot-meta{display:flex;flex-direction:column}
+    .hot-meta b{font-size:14px}
+    .hot-meta span{font-size:12px;color:var(--muted)}
+
+    /* FOOTER */
+    footer{background:var(--ink);color:#e5e7eb}
+    .footer-inner{max-width:1200px;margin:auto;padding:36px 18px;display:grid;gap:22px}
+    .f-brand{display:flex;gap:12px;align-items:center}
+    .f-cols{display:grid;gap:22px}
+    .f-col h4{margin:0 0 10px;font-weight:800}
+    .f-col a{display:block;color:#cbd5e1;margin:6px 0}
+    .f-col a:hover{color:#fff}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:12px 0;text-align:center;color:#94a3b8}
+
+    /* UTIL */
+    .container{max-width:1200px;margin:auto}
+    .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+    .reveal{opacity:0;transform:translateY(12px);transition:opacity .5s ease, transform .5s ease}
+    .reveal.in{opacity:1;transform:none}
+
+    /* RESPONSIVE */
+    @media (min-width:768px){
+      .menu{display:flex}
+      .hamburger{display:none}
+      .hero{padding:88px 18px}
+      .hero h1{font-size:52px}
+      .hero p{font-size:18px}
+      .hot-grid{grid-template-columns:repeat(2,1fr)}
+      .footer-inner{grid-template-columns:1.2fr 2fr}
+      .f-cols{grid-template-columns:repeat(3,1fr)}
+    }
+    @media (min-width:1024px){
+      .hot-grid{grid-template-columns:repeat(4,1fr)}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner container">
+      <div class="brand">
+        <div class="brand-logo">Y</div>
+        <div class="brand-name">Youngtec Digital Books</div>
+      </div>
+      <div class="menu">
+        <a href="#" aria-label="Home">Home</a>
+        <a href="#bestsellers" aria-label="Best Sellers">Best Sellers</a>
+        <a href="#featured" aria-label="Featured Books">Featured</a>
+        <a href="#selar-hot" aria-label="Selar Hot Books">Selar Hot</a>
+        <a href="contact.html" aria-label="Contact">Contact</a>
+      </div>
+      <a class="cta" href="https://selar.com/m/youngteccomputers" target="_blank" rel="noopener">Shop on Selar</a>
+      <button class="hamburger" id="hamburger" aria-label="Open Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-panel container" id="mobilePanel">
+      <a href="#">Home</a>
+      <a href="#bestsellers">Best Sellers</a>
+      <a href="#featured">Featured</a>
+      <a href="#selar-hot">Selar Hot</a>
+      <a href="#contact">Contact</a>
+      <a href="https://selar.co/m/OlusolaAkogun" target="_blank" class="cta" style="display:inline-block;margin-top:8px;">Shop on Selar</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">OFFICIAL STORE • YOUNGTEC</span>
+      <h1 class="reveal">Inspiring Books for a Transforming Generation</h1>
+      <p class="reveal">Explore impactful titles by Olusola A. Akogun — stories and manuals that inspire, guide, and empower the next generation.</p>
+      <div class="hero-ctas reveal">
+        <a href="https://selar.com/m/youngteccomputers" target="_blank" rel="noopener" class="btn btn-primary">Shop All on Selar</a>
+        <a href="https://selar.com/m/youngteccomputers" class="btn btn-ghost">Browse Best Sellers</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BEST SELLERS (3) -->
+  <section id="bestsellers">
+    <div class="section-inner">
+      <h2 class="section-title">Best Sellers</h2>
+      <p class="section-sub">Our most-loved titles. Slide to explore and tap to purchase on Selar.</p>
+      <div class="swiper bestSwiper">
+        <div class="swiper-wrapper">
+          <!-- Card 1 -->
+          <div class="swiper-slide">
+            <article class="book-card reveal">
+              <span class="pill">Top Pick</span>
+              <img class="book-cover" src="images/leading.jpg" alt="Leading With Purpose cover">
+              <h3 class="book-title">Leading With Purpose</h3>
+              <p class="book-author">Olusola A. Akogun</p>
+              <a class="btn-buy" href="https://selar.com/m/youngteccomputers" target="_blank" rel="noopener">Buy on Selar</a>
+            </article>
+          </div>
+          <!-- Card 2 -->
+          <div class="swiper-slide">
+            <article class="book-card reveal">
+              <span class="pill">Bestseller</span>
+              <img class="book-cover" src="images/rescuenextg.jpg" alt="Rescue The Next Generation cover">
+              <h3 class="book-title">Rescue The Next Generation</h3>
+              <p class="book-author">Olusola A. Akogun</p>
+              <a class="btn-buy" href="https://selar.com/m/youngteccomputers" target="_blank" rel="noopener">Buy on Selar</a>
+            </article>
+          </div>
+          <!-- Card 3 -->
+          <div class="swiper-slide">
+            <article class="book-card reveal">
+              <span class="pill">Editor's Choice</span>
+              <img class="book-cover" src="images/whenGod.jpg" alt="When God Says Sing cover">
+              <h3 class="book-title">When God Says Sing</h3>
+              <p class="book-author">Olusola A. Akogun</p>
+              <a class="btn-buy" href="https://selar.com/m/youngteccomputers" target="_blank" rel="noopener">Buy on Selar</a>
+            </article>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED (6) -->
+  <section id="featured">
+    <div class="section-inner">
+      <h2 class="section-title">Featured Books</h2>
+      <p class="section-sub">Handpicked highlights — practical, faith-filled, and transformative.</p>
+
+      <div class="swiper featuredSwiper">
+        <div class="swiper-wrapper">
+          <!-- six featured -->
+          <div class="swiper-slide"><article class="book-card reveal"><img class="book-cover" src="images/fundamental.jpg" alt="Faith & Finance"><h3 class="book-title">Faith & Finance</h3><p class="book-author">Olusola A. Akogun</p><a class="btn-buy" href="https://selar.com/11y229" target="_blank" rel="noopener">View on Selar</a></article></div>
+          <div class="swiper-slide"><article class="book-card reveal"><img class="book-cover" src="images/love&peace.jpg" alt="Love and Peace in the Holy Spirit"><h3 class="book-title">Love And Peace in the Holy Spirit</h3><p class="book-author">Olusola A. Akogun</p><a class="btn-buy" href="https://selar.com/20s9v6" target="_blank" rel="noopener">View on Selar</a></article></div>
+          <div class="swiper-slide"><article class="book-card reveal"><img class="book-cover" src="images/faith&finance.jpg" alt="School of Faith & Finance"><h3 class="book-title">School of Faith & Finance</h3><p class="book-author">Olusola A. Akogun</p><a class="btn-buy" href="https://selar.com/85df33" target="_blank" rel="noopener">View on Selar</a></article></div>
+          <div class="swiper-slide"><article class="book-card reveal"><img class="book-cover" src="images/soundfromheaven.jpg" alt="A Sound From Heaven"><h3 class="book-title">A Sound From Heaven</h3><p class="book-author">Olusola A. Akogun</p><a class="btn-buy" href="https://selar.co/14y2s9" target="_blank" rel="noopener">View on Selar</a></article></div>
+          <div class="swiper-slide"><article class="book-card reveal"><img class="book-cover" src="images/DevotionalGuide.jpg" alt="Devotional Sunday School Guide"><h3 class="book-title">Devotional Sunday School Guide</h3><p class="book-author">Olusola A. Akogun</p><a class="btn-buy" href="https://selar.com/u62617" target="_blank" rel="noopener">View on Selar</a></article></div>
+          <div class="swiper-slide"><article class="book-card reveal"><img class="book-cover" src="images/myfather.jpg" alt="My Father My Hero"><h3 class="book-title">My Father, My Hero!</h3><p class="book-author">Olusola A. Akogun</p><a class="btn-buy" href="https://selar.co/c07817" target="_blank" rel="noopener">View on Selar</a></article></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELAR HOT BOOKS (manual list) -->
+  <section id="selar-hot">
+    <div class="section-inner">
+      <h2 class="section-title">🔥 Selar Hot Books</h2>
+      <p class="section-sub">Quick links to trending picks on our Selar storefront.</p>
+      <div class="hot-grid">
+        <a class="hot-item reveal" href="https://selar.com/mxkt59" target="_blank" rel="noopener">
+          <img class="hot-thumb" src="images/thetestimonyofJesus.jpg" alt="Hot 1" />
+          <div class="hot-meta"><b>The Testimony of Jesus</b><span>View on Selar</span></div>
+        </a>
+        <a class="hot-item reveal" href="https://selar.co/m/youngteccomputers" target="_blank" rel="noopener">
+          <img class="hot-thumb" src="images/rescuenextg.jpg" alt="Hot 2" />
+          <div class="hot-meta"><b>Rescue The Next Generation</b><span>View on Selar</span></div>
+        </a>
+        <a class="hot-item reveal" href="https://selar.co/m/youngteccomputers" target="_blank" rel="noopener">
+          <img class="hot-thumb" src="images/whenGod.jpg" alt="Hot 3" />
+          <div class="hot-meta"><b>When God Says Sing</b><span>View on Selar</span></div>
+        </a>
+        <a class="hot-item reveal" href="https://selar.com/70q6o0" target="_blank" rel="noopener">
+          <img class="hot-thumb" src="images/thetrueriches.jpg" alt="Hot 4" />
+          <div class="hot-meta"><b>The True Riches</b><span>View on Selar</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="footer-inner">
+      <div class="f-brand">
+        <div class="brand-logo" aria-hidden="true">Y</div>
+        <div>
+          <h3 style="margin:0;font-weight:900">Youngtec Books</h3>
+          <p style="margin:6px 0 0;color:#94a3b8">Empowering the next generation with knowledge and faith.</p>
+        </div>
+      </div>
+      <div class="f-cols">
+        <div class="f-col">
+          <h4>Youngtec Computers</h4>
+          <a href="index.html">Home</a>
+          <a href="training.html">Training</a>
+          <a href="developer.html">Meet the Developer</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="f-col">
+          <h4>Books</h4>
+          <a href="#bestsellers">Best Sellers</a>
+          <a href="#featured">Featured</a>
+          <a href="#selar-hot">Selar Hot</a>
+          <a href="https://selar.co/m/youngteccomputers" target="_blank">Shop on Selar</a>
+        </div>
+        <div class="f-col">
+          <h4>Follow</h4>
+          <a href="https://web.facebook.com/akogun.olusola">Facebook</a>
+          <a href="https://api.whatsapp.com/send/?phone=2348163860415&text&type=phone_number&app_absent=0">WhatsApp</a>
+          <a href="https://www.youtube.com/@YoungtecSmartEdge">YouTube</a>
+          <a href="https://x.com/YoungtecCom/status/1958753041932271717">X (Twitter)</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span id="year"></span> Youngtec Computers • All rights reserved</div>
+  </footer>
+
+  <!-- Back to Top -->
+  <a href="#" id="backToTop" class="btn btn-primary" style="position:fixed;right:16px;bottom:16px;display:none;box-shadow:var(--shadow);">↑ Top</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const burger = document.getElementById('hamburger');
+    const panel = document.getElementById('mobilePanel');
+    burger?.addEventListener('click', () => {
+      const expanded = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!expanded));
+      panel.style.display = expanded ? 'none' : 'block';
+    });
+
+    // Swipers (mobile-first)
+    const bestSwiper = new Swiper('.bestSwiper', {
+      slidesPerView: 1,
+      spaceBetween: 18,
+      loop: true,
+      pagination: { el: '.bestSwiper .swiper-pagination', clickable: true },
+      navigation: {
+        nextEl: '.bestSwiper .swiper-button-next',
+        prevEl: '.bestSwiper .swiper-button-prev',
+      },
+      breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+    });
+
+    const featuredSwiper = new Swiper('.featuredSwiper', {
+      slidesPerView: 1,
+      spaceBetween: 18,
+      loop: true,
+      pagination: { el: '.featuredSwiper .swiper-pagination', clickable: true },
+      navigation: {
+        nextEl: '.featuredSwiper .swiper-button-next',
+        prevEl: '.featuredSwiper .swiper-button-prev',
+      },
+      breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+    });
+
+    // Reveal on scroll (simple fade-up)
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // Back to Top visibility
+    const backBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backBtn.style.display = window.scrollY > 600 ? 'inline-block' : 'none';
+    });
+  </script>
+</body>
+</html>

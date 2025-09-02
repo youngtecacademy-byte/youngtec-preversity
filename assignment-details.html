@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment Details - Youngtec Computers Academy</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f4f6f9; }
+    header { background: navy; color: yellow; padding: 15px; text-align: center; }
+    .container { max-width: 700px; margin: 30px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    h2 { color: navy; }
+    form { margin-top: 20px; }
+    label { font-weight: bold; display: block; margin-top: 10px; }
+    input[type="file"], input[type="text"], textarea { width: 100%; padding: 10px; margin-top: 8px; border: 1px solid #ccc; border-radius: 5px; }
+    button { margin-top: 15px; padding: 12px; background: navy; color: yellow; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background: darkblue; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Youngtec Computers Academy</h1>
+    <p>Assignment Submission Portal</p>
+  </header>
+
+  <div class="container">
+    <h2>Assignment Title: Web Development Basics</h2>
+    <p><strong>Deadline:</strong> August 30, 2025</p>
+    <p><strong>Description:</strong> Submit your HTML & CSS project files.</p>
+
+    <!-- File Upload Form -->
+    <form action="upload.php" method="POST" enctype="multipart/form-data">
+      <label for="studentName">Your Name:</label>
+      <input type="text" name="studentName" required>
+
+      <label for="assignment">Upload File:</label>
+      <input type="file" name="assignment" accept=".pdf,.doc,.docx,.zip,.html,.css,.js" required>
+
+      <button type="submit">Submit Assignment</button>
+    </form>
+  </div>
+</body>
+</html>

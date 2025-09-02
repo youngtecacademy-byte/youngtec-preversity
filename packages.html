@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartExam Suite</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-6 py-4 flex justify-between items-center shadow-md sticky top-0 z-50">
+    <h1 class="text-2xl font-bold">SmartExam Suite</h1>
+    <ul class="hidden md:flex space-x-6">
+      <li><a href="smartexamsuite.html" class="hover:text-yellow-300">Home</a></li>
+      <li><a href="packages.html" class="hover:text-yellow-300">Packages</a></li>
+      <li><a href="purchase.html" class="hover:text-yellow-300">Purchase</a></li>
+      <li><a href="author.html" class="hover:text-yellow-300">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="text-center py-16 bg-gradient-to-r from-indigo-100 to-blue-100">
+    <h1 class="text-5xl md:text-6xl font-extrabold text-indigo-700">SmartExam Suite</h1>
+    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Your complete Computer-Based Testing and Examination Solution — tailored to schools, institutions, and professionals.</p>
+  </section>
+
+  <!-- Packages -->
+  <section class="py-12 px-6 max-w-7xl mx-auto grid gap-10 md:grid-cols-3">
+    <!-- Package 1 -->
+    <div class="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center text-center border-t-4 border-blue-500">
+      <img src="images/basic-cbt.jpg" alt="Basic CBT Edition" class="rounded-xl mb-4">
+      <h2 class="text-2xl font-bold text-blue-600">Basic CBT Edition</h2>
+      <p class="mt-2 text-gray-600">Perfect for small schools and institutions needing a straightforward CBT platform. Includes multiple-choice, timer, and auto-grading.</p>
+      <button onclick="openModal()" class="mt-4 bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 shadow-md">Purchase Now</button>
+    </div>
+
+    <!-- Package 2 -->
+    <div class="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center text-center border-t-4 border-green-500">
+      <img src="images/personalized.jpg" alt="Personalized Edition" class="rounded-xl mb-4">
+      <h2 class="text-2xl font-bold text-green-600">Personalized Edition</h2>
+      <p class="mt-2 text-gray-600">Customized features with branding, advanced question types, and detailed analytics. Ideal for mid-size organizations.</p>
+      <button onclick="openModal()" class="mt-4 bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 shadow-md">Purchase Now</button>
+    </div>
+
+    <!-- Package 3 -->
+    <div class="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center text-center border-t-4 border-purple-500">
+      <img src="images/enterprise.jpg" alt="Executive Custom Edition" class="rounded-xl mb-4">
+      <h2 class="text-2xl font-bold text-purple-600">Executive Custom Edition</h2>
+      <p class="mt-2 text-gray-600">Enterprise-level solutions with unlimited scalability, integrations, and full technical support.</p>
+      <button onclick="openModal()" class="mt-4 bg-purple-600 text-white px-5 py-2 rounded-full hover:bg-purple-700 shadow-md">Purchase Now</button>
+    </div>
+  </section>
+
+  <!-- Compare & Contrast Section -->
+  <section class="py-12 px-6 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-indigo-700 mb-8">Compare Our Editions</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full border border-gray-200 rounded-lg shadow-md">
+        <thead class="bg-indigo-600 text-white">
+          <tr>
+            <th class="px-6 py-3 text-left">Feature</th>
+            <th class="px-6 py-3">Basic CBT</th>
+            <th class="px-6 py-3">Personalized</th>
+            <th class="px-6 py-3">Enterprise</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white">
+          <tr class="border-t">
+            <td class="px-6 py-4">MCQ & Auto-Grading</td>
+            <td class="text-center">✔️</td>
+            <td class="text-center">✔️</td>
+            <td class="text-center">✔️</td>
+          </tr>
+          <tr class="border-t">
+            <td class="px-6 py-4">Brand Customization</td>
+            <td class="text-center">❌</td>
+            <td class="text-center">✔️</td>
+            <td class="text-center">✔️</td>
+          </tr>
+          <tr class="border-t">
+            <td class="px-6 py-4">Advanced Question Types</td>
+            <td class="text-center">❌</td>
+            <td class="text-center">✔️</td>
+            <td class="text-center">✔️</td>
+          </tr>
+          <tr class="border-t">
+            <td class="px-6 py-4">Unlimited Users</td>
+            <td class="text-center">❌</td>
+            <td class="text-center">❌</td>
+            <td class="text-center">✔️</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="purchaseModal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+    <div class="bg-white rounded-xl shadow-2xl p-8 w-96 relative">
+      <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-600 hover:text-red-600">
+        <i data-feather="x"></i>
+      </button>
+      <h2 class="text-2xl font-bold text-indigo-600 mb-4">Purchase SmartExam Suite</h2>
+      <form class="space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400">
+        <input type="email" placeholder="Your Email" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400">
+        <input type="tel" placeholder="Phone Number" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400">
+        <select class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400">
+          <option>Select Package</option>
+          <option>Basic CBT Edition</option>
+          <option>Personalized Edition</option>
+          <option>Executive Custom Edition</option>
+        </select>
+        <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700">Submit</button>
+      </form>
+
+      <!-- Divider -->
+      <div class="my-6 flex items-center">
+        <div class="flex-grow border-t border-gray-300"></div>
+        <span class="mx-3 text-gray-400">or</span>
+        <div class="flex-grow border-t border-gray-300"></div>
+      </div>
+
+      <!-- Redirect to full purchase.html -->
+      <a href="purchase.html" class="block text-center w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg shadow-md hover:scale-105 transform transition">
+        Go to Full Purchase Page
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-6 text-center mt-auto">
+    <p>&copy; 2025 SmartExam Suite. Designed by Youngtec.</p>
+  </footer>
+
+  <script>
+    feather.replace();
+    function openModal() {
+      document.getElementById('purchaseModal').classList.remove('hidden');
+      document.getElementById('purchaseModal').classList.add('flex');
+    }
+    function closeModal() {
+      document.getElementById('purchaseModal').classList.add('hidden');
+      document.getElementById('purchaseModal').classList.remove('flex');
+    }
+  </script>
+</body>
+</html>

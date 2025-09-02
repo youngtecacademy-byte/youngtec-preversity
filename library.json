@@ -1,0 +1,67 @@
+{
+  "categories": [
+    {
+      "name": "Computer Science",
+      "books": [
+        {
+          "title": "Introduction to Programming",
+          "author": "John Doe",
+          "year": 2022,
+          "type": "PDF",
+          "link": "books/programming_intro.pdf",
+          "availability": "Available"
+        },
+        {
+          "title": "Data Structures & Algorithms",
+          "author": "Jane Smith",
+          "year": 2021,
+          "type": "EPUB",
+          "link": "books/dsa.epub",
+          "availability": "Available"
+        }
+      ]
+    },
+    {
+      "name": "Mathematics",
+      "books": [
+        {
+          "title": "Advanced Calculus",
+          "author": "Michael Brown",
+          "year": 2020,
+          "type": "PDF",
+          "link": "books/advanced_calculus.pdf",
+          "availability": "Available"
+        },
+        {
+          "title": "Linear Algebra Made Easy",
+          "author": "Alice Johnson",
+          "year": 2023,
+          "type": "PDF",
+          "link": "books/linear_algebra.pdf",
+          "availability": "Borrowed"
+        }
+      ]
+    },
+    {
+      "name": "Literature",
+      "books": [
+        {
+          "title": "Classic English Poetry",
+          "author": "William Blake",
+          "year": 2019,
+          "type": "PDF",
+          "link": "books/classic_poetry.pdf",
+          "availability": "Available"
+        },
+        {
+          "title": "Modern African Literature",
+          "author": "Chinua Achebe",
+          "year": 2018,
+          "type": "EPUB",
+          "link": "books/african_lit.epub",
+          "availability": "Available"
+        }
+      ]
+    }
+  ]
+}

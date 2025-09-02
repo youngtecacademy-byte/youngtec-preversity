@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Books - Youngtec Computers</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .book-card { border: 1px solid #ddd; border-radius: 10px; overflow: hidden; transition: transform 0.2s; }
+    .book-card:hover { transform: scale(1.03); }
+    .book-card img { height: 200px; object-fit: cover; }
+    .footer { background: #222; color: #fff; padding: 30px 0; margin-top: 40px; }
+    .footer a { color: #fff; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<!-- ====== NAVTOP ====== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Youngtec Computers</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="developer.html">Meet the Author</a></li>
+        <li class="nav-item"><a class="nav-link active" href="digitalbooks.html">Digital Books</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ====== HERO ====== -->
+<section class="bg-light py-5 text-center">
+  <div class="container">
+    <h1 class="fw-bold">Digital Books, Magazines, Journals & Stories</h1>
+    <p class="lead">Explore and download our collection of books — available for free or via secure Selar purchase.</p>
+  </div>
+</section>
+
+<!-- ====== BOOKS SECTION ====== -->
+<section class="container py-5">
+  <div class="row g-4">
+
+    <!-- Book 1 (Free) -->
+    <div class="col-md-4">
+      <div class="book-card shadow-sm">
+        <img src="images/whenhecomes.jpg" class="w-100" alt="Free Book">
+        <div class="p-3">
+          <h5>When He Comes!</h5>
+          <p class="text-muted">Learn the basics of HTML, CSS & JavaScript in this beginner-friendly guide.</p>
+          <div class="d-flex justify-content-between">
+            <a href="https://selar.com/155152" target="_blank" class="btn btn-warning btn-sm">Download</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Book 2 (Paid with Modal) -->
+    <div class="col-md-4">
+      <div class="book-card shadow-sm">
+        <img src="images/rescuenextg.jpg" class="w-100" alt="Paid Book">
+        <div class="p-3">
+          <h5>Rescue The Next Generation</h5>
+          <p class="text-muted">A powerful book by Olusola A. Akogun inspiring faith and leadership.</p>
+          <div class="d-flex justify-content-between">
+            <span class="fw-bold">₦2,500</span>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#buyNowModal">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Book 3 (Paid Direct to Selar) -->
+    <div class="col-md-4">
+      <div class="book-card shadow-sm">
+        <img src="images/leading.jpg" class="w-100" alt="Selar Book">
+        <div class="p-3">
+          <h5>Leading With Purpose</h5>
+          <p class="text-muted">By Olusola A. Akogun — available on Selar for instant purchase.</p>
+          <div class="d-flex justify-content-between">
+            <span class="fw-bold">₦3,000</span>
+            <a href="https://selar.co/m/youngteccomputers" target="_blank" class="btn btn-warning btn-sm">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Book 4 (Paid Direct to Selar) -->
+    <div class="col-md-4">
+      <div class="book-card shadow-sm">
+        <img src="images/understandingspiritgifts.jpg" class="w-100" alt="Selar Book">
+        <div class="p-3">
+          <h5>Understanding Spirit Gifts</h5>
+          <p class="text-muted">By Olusola A. Akogun — available on Selar for instant purchase.</p>
+          <div class="d-flex justify-content-between">
+            <span class="fw-bold">₦3,000</span>
+            <a href="https://selar.co/m/youngteccomputers" target="_blank" class="btn btn-warning btn-sm">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Book 5 (Paid Direct to Selar) -->
+    <div class="col-md-4">
+      <div class="book-card shadow-sm">
+        <img src="images/Godsecretcode.jpg" class="w-100" alt="Selar Book">
+        <div class="p-3">
+          <h5>God's Secret Language</h5>
+          <p class="text-muted">By Olusola A. Akogun — available on Selar for instant purchase.</p>
+          <div class="d-flex justify-content-between">
+            <span class="fw-bold">₦4,000</span>
+            <a href="https://selar.co/1zizi4" target="_blank" class="btn btn-warning btn-sm">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Book 6 (Paid Direct to Selar) -->
+    <div class="col-md-4">
+      <div class="book-card shadow-sm">
+        <img src="images/devotional2.jpg" class="w-100" alt="Selar Book">
+        <div class="p-3">
+          <h5>Sunday School Guide</h5>
+          <p class="text-muted">By Olusola A. Akogun — available on Selar for instant purchase.</p>
+          <div class="d-flex justify-content-between">
+            <span class="fw-bold">₦700</span>
+            <a href="https://selar.co/m/youngteccomputers" target="_blank" class="btn btn-warning btn-sm">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- Book 4 (Paid Direct to Selar) -->
+    <div class="col-md-4">
+      <div class="book-card shadow-sm">
+        <img src="images/book4.PNG" class="w-100" alt="Selar Book">
+        <div class="p-3">
+          <h5>Let's CODE! for Kids</h5>
+          <p class="text-muted">By Olusola A. Akogun — available on Selar for instant purchase.</p>
+          <div class="d-flex justify-content-between">
+            <span class="fw-bold">₦2,500</span>
+            <a href="https://selar.com/50gp72" target="_blank" class="btn btn-warning btn-sm">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Book 5 (Paid Direct to Selar) -->
+    <div class="col-md-4">
+      <div class="book-card shadow-sm">
+        <img src="images/img87.jpeg" class="w-100" alt="Selar Book">
+        <div class="p-3">
+          <h5>Understanding HTML, CSS, and JavaScript in 10 Days</h5>
+          <p class="text-muted">By Olusola A. Akogun — available on Selar.</p>
+          <div class="d-flex justify-content-between">
+            <span class="fw-bold">₦2,000</span>
+            <a href="https://selar.co/m/youngteccomputers" target="_blank" class="btn btn-warning btn-sm">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Book 6 (Paid Direct to Selar) -->
+    <div class="col-md-4">
+      <div class="book-card shadow-sm">
+        <img src="images/event-hero2.jpeg" class="w-100" alt="Selar Book">
+        <div class="p-3">
+          <h5>Applied Magazines</h5>
+          <p class="text-muted">Coming Soon!. Developed By Youngtec Digital Hub — will be available on Selar</p>
+          <div class="d-flex justify-content-between">
+            <span class="fw-bold">Free Download</span>
+            <a href="https://selar.co/m/youngteccomputers" target="_blank" class="btn btn-warning btn-sm">Download Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== BUY NOW MODAL ====== -->
+<div class="modal fade" id="buyNowModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">Buy Book - Rescue The Next Generation</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Price:</strong> ₦2,500</p>
+        <p>To purchase this book, kindly make payment via:</p>
+        <ul>
+          <li><strong>Bank Transfer:</strong> GT Bank - 0035214448 (Akogun Olusola Prudent)</li>
+          <li><strong>Selar:</strong> <a href="https://selar.co/m/youngteccomputers" target="_blank">Click here to pay on Selar</a></li>
+        </ul>
+        <p>After payment, send proof to <strong>info.youngteccomputers@gmail.com</strong> for confirmation and download link.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer text-center">
+  <div class="container">
+    <p>&copy; 2025 Youngtec Training. All Rights Reserved.</p>
+    <p>
+      <a href="index.html">Home</a> | 
+      <a href="developer.html">Meet The Author</a> | 
+      <a href="digitalbooks.html">Digital Books</a> | 
+      <a href="contact.html">Contact</a>
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

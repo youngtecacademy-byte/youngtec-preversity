@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply Now - Youngtec Careers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .form-section { background: #f9f9f9; padding: 40px 0; }
+    .form-card { background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+    .form-card h2 { color: #007bff; margin-bottom: 20px; }
+    footer { background: #222; color: #ccc; padding: 50px 20px; }
+    footer h5 { color: #fff; margin-bottom: 20px; }
+    footer a { color: #ccc; text-decoration: none; }
+    footer a:hover { color: #007bff; }
+    .social-icons a { font-size: 20px; margin-right: 15px; color: #ccc; }
+    .social-icons a:hover { color: #007bff; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Youngtec Careers</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- APPLY FORM -->
+  <section class="form-section">
+    <div class="container">
+      <div class="form-card">
+        <h2>Apply for a Position</h2>
+        <p>Please fill in the form below to apply for your desired role.</p>
+        <form id="jobApplicationForm" action="https://formspree.io/f/xzzvqdrn" method="POST" enctype="multipart/form-data">
+
+          <div class="mb-3">
+            <label for="fullName" class="form-label">Full Name *</label>
+            <input type="text" class="form-control" id="fullName" name="Full Name" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email *</label>
+            <input type="email" class="form-control" id="email" name="Email" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone *</label>
+            <input type="tel" class="form-control" id="phone" name="Phone" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="position" class="form-label">Position Applying For *</label>
+            <select class="form-select" id="position" name="Position" required>
+              <option value="">-- Select Position --</option>
+              <option>Software Developer</option>
+              <option>Cybersecurity Analyst</option>
+              <option>Data Scientist</option>
+              <option>IT Support</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="resume" class="form-label">Upload Resume *</label>
+            <input type="file" class="form-control" id="resume" name="Resume" accept=".pdf,.doc,.docx" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="coverLetter" class="form-label">Cover Letter</label>
+            <textarea class="form-control" id="coverLetter" rows="4" name="Cover Letter"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">Submit Application</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFIRMATION MODAL -->
+  <div class="modal fade" id="confirmationModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center p-4">
+        <div class="modal-body">
+          <i class="fa-solid fa-circle-check fa-3x text-success mb-3"></i>
+          <h5>Application Submitted!</h5>
+          <p>Thank you for applying. Our HR team will review your application and contact you soon.</p>
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Okay</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>Company</h5>
+          <ul class="list-unstyled">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="course-career.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Resources</h5>
+          <ul class="list-unstyled">
+            <li><a href="training.html">Training</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="help-center.html">Help Center</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="courseware.html">Courses</a></li>
+            <li><a href="jobs.html">Job Openings</a></li>
+            <li><a href="partnerships.html">Partnerships</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Connect with Us</h5>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="mt-4">
+      <p class="text-center">&copy; 1998-2025 Youngtec Careers. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Intercept form submit for modal confirmation
+    document.getElementById("jobApplicationForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // stop default form
+      const form = event.target;
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          form.reset();
+          new bootstrap.Modal(document.getElementById('confirmationModal')).show();
+        } else {
+          alert("Oops! Something went wrong. Try again.");
+        }
+      }).catch(error => alert("Network error. Please try again later."));
+    });
+  </script>
+</body>
+</html>

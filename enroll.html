@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enroll Now - Youngtec Academy</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    body {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                  url('images/img8.jpeg') center/cover no-repeat fixed;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+    }
+    .navbar {
+      background: rgba(0, 0, 0, 0.7);
+    }
+    .enroll-card {
+      background: rgba(255, 255, 255, 0.95);
+      color: #333;
+      border-radius: 20px;
+      box-shadow: 0px 8px 25px rgba(0,0,0,0.3);
+      padding: 2rem;
+    }
+    .form-label {
+      font-weight: 600;
+      color: #222;
+    }
+    .btn-enroll {
+      background: #007bff;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 25px;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    .btn-enroll:hover {
+      background: #0056b3;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" alt="Logo" style="height:40px;">
+    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="courseware.html">Courseware</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Hero Section -->
+  <section class="hero" style="background-image: url(images/lean-office.jpg);">
+    <div class="container">
+      <h1>Pre-Admission</h1>
+      <p class="lead">Begin your learning journey today — choose your school, 
+        pick your courses, and take the first step toward your future.</p>
+    </div>
+  </section>
+
+  <!-- Enroll Form Section -->
+  <section class="d-flex align-items-center justify-content-center" style="min-height:100vh;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="enroll-card">
+            <h2 class="text-center mb-4">Enroll Now</h2>
+            <form action="https://formspree.io/f/xzzvqdrn" method="POST">
+              
+              <!-- Name -->
+              <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" name="name" class="form-control" required>
+              </div>
+
+              <!-- Email -->
+              <div class="mb-3">
+                <label class="form-label">Email Address</label>
+                <input type="email" name="email" class="form-control" required>
+              </div>
+
+              <!-- Phone -->
+              <div class="mb-3">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" name="phone" class="form-control" required>
+              </div>
+
+              <!-- School -->
+              <div class="mb-3">
+                <label class="form-label">Select School</label>
+                <select id="school" name="school" class="form-select" required>
+                  <option value="">-- Choose School --</option>
+                  <option value="Multimedia">School of Multimedia</option>
+                  <option value="Technology">School of Technology</option>
+                  <option value="AI">School of AI</option>
+                  <option value="FaithFinance">School of Faith & Finance</option>
+                  <option value="Engineering">School of Engineering</option>
+                  <option value="OfficeApps">School of Office Apps</option>
+                </select>
+              </div>
+
+              <!-- Course 1 -->
+              <div class="mb-3">
+                <label class="form-label">Select Course 1</label>
+                <select id="course1" name="course1" class="form-select" required>
+                  <option value="">-- Choose Course --</option>
+                </select>
+              </div>
+
+              <!-- Course 2 -->
+              <div class="mb-3">
+                <label class="form-label">Select Course 2</label>
+                <select id="course2" name="course2" class="form-select">
+                  <option value="">-- Optional Second Course --</option>
+                </select>
+              </div>
+
+              <!-- Submit -->
+              <div class="d-grid">
+                <button type="submit" class="btn btn-enroll">Submit Enrollment</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p>&copy; 1998-2025 Youngtec Computers Academy. All Rights Reserved.</p>
+    </div>
+  </footer>  
+  <!-- Course Filtering Script -->
+  <script>
+    const schoolSelect = document.getElementById('school');
+    const course1Select = document.getElementById('course1');
+    const course2Select = document.getElementById('course2');
+
+    const courses = {
+      Multimedia: ["Video Editing", "3D Animation", "Photography", "Graphic Design"],
+      Technology: ["Web Development", "Mobile App Development", "Cybersecurity", "Networking"],
+      AI: ["Machine Learning", "Data Science", "AI for Kids", "Deep Learning"],
+      FaithFinance: ["Biblical Finance", "Faith in Business", "School of Faith Essentials"],
+      Engineering: ["Hardware Enginnering Basics", "Laptop Repair", "Desktop Repair Engineering", "Computer Engineering"],
+      OfficeApps: ["Microsoft Word", "Microsoft Excel", "Microsoft PowerPoint", "Microsoft Publishers"]
+    };
+
+    function updateCourses() {
+      const selectedSchool = schoolSelect.value;
+      const options = courses[selectedSchool] || [];
+
+      [course1Select, course2Select].forEach(select => {
+        select.innerHTML = `<option value="">-- Choose Course --</option>`;
+        options.forEach(course => {
+          const opt = document.createElement("option");
+          opt.value = course;
+          opt.textContent = course;
+          select.appendChild(opt);
+        });
+      });
+    }
+
+    schoolSelect.addEventListener('change', updateCourses);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission - Youngtec Computers</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f7fa;}
+    header {background: #001f3f; color: #fff; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;}
+    header h1 {margin: 0; font-size: 1.5rem; color: #FFD700;}
+    nav a {color: #fff; text-decoration: none; margin: 0 10px; font-weight: bold;}
+    nav a:hover {color: #FFD700;}
+    .hero {background: linear-gradient(135deg, #001f3f, #004080); color: #fff; padding: 60px 20px; text-align: center;}
+    .hero h2 {font-size: 2.5rem; margin-bottom: 15px; color: #FFD700;}
+    .container {max-width: 900px; margin: 30px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);}
+    .container h3 {color: #001f3f; margin-bottom: 10px;}
+    form {display: grid; grid-gap: 15px;}
+    input, select, textarea {padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem;}
+    button {padding: 12px; border: none; border-radius: 5px; background: #001f3f; color: #fff; font-size: 1rem; cursor: pointer;}
+    button:hover {background: #FFD700; color: #001f3f;}
+    footer {background: #001f3f; color: #fff; text-align: center; padding: 20px; margin-top: 40px;}
+    footer a {color: #FFD700; text-decoration: none;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Youngtec Computers</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="hot-courses.html">Hot Programs</a>
+      <a href="payments.html">Payments</a>
+      <a href="scholarship-results.html">Scholarship Results</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Admission at Youngtec Computers</h2>
+    <p>Take the first step towards your IT career with our structured admission process.</p>
+  </section>
+
+  <section class="container">
+    <h3>Apply for Admission</h3>
+    <p>Please fill in the form below to apply for admission into Youngtec Computers Academy.</p>
+    <form action="https://formspree.io/f/xzzvqdrn" method="POST">
+      <label>Full Name</label>
+      <input type="text" name="fullname" placeholder="Enter your full name" required>
+
+      <label>Email Address</label>
+      <input type="email" name="email" placeholder="Enter your email" required>
+
+      <label>Phone Number</label>
+      <input type="tel" name="phone" placeholder="+234..." required>
+
+      <label>Preferred Course</label>
+      <select name="course" required>
+        <option value="">-- Select Course --</option>
+        <option>Computer Literacy</option>
+        <option>Graphics Design</option>
+        <option>Web Design</option>
+        <option>Mobile Development</option>
+      </select>
+
+      <label>Why do you want to join Youngtec Computers Academy?</label>
+      <textarea name="reason" rows="4" placeholder="Your reason here..." required></textarea>
+
+      <button type="submit">Submit Admission Form</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Youngtec Computers. All Rights Reserved. | <a href="index.html">Home</a> | <a href="courses.html">Courses</a> | <a href="payments.html">Payments</a></p>
+  </footer>
+</body>
+</html>

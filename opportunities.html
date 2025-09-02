@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Opportunities | Youngtec Portal</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    body { font-family: 'Roboto', sans-serif; }
+    .navbar { background-color: #001f54; }
+    .navbar-brand, .nav-link { color: #fff !important; }
+    .nav-link:hover { color: #FFD700 !important; }
+    .hero { background: linear-gradient(135deg, #001f54, #003366); color: white; padding: 100px 0; text-align: center; }
+    .job-card { border-top: 4px solid #FFD700; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .job-card:hover { transform: translateY(-8px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+    .job-icon { color: #001f54; font-size: 40px; margin-bottom: 15px; }
+    footer { background: linear-gradient(to right, #001f54, #003366); color: #fff; padding: 50px 0; }
+    footer a { color: #FFD700; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo.png" alt="Logo" width="100" height="40" class="me-2">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="corevalues.html">Core Values</a></li>
+          <li class="nav-item"><a class="nav-link" href="career-programs.html">Career Programs</a></li>
+          <li class="nav-item"><a class="nav-link active" href="opportunities.html">Opportunities</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Career Opportunities</h1>
+      <p class="lead mt-3">Explore current openings at Youngtec. Discover roles that fit your skills and passion, and apply directly below!</p>
+    </div>
+  </section>
+
+  <!-- Opportunities Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Software Engineer -->
+        <div class="col-md-4">
+          <div class="card job-card h-100 p-4 text-center">
+            <i class="fas fa-laptop-code job-icon"></i>
+            <h4 class="fw-bold mb-3">Software Engineer</h4>
+            <ul class="list-unstyled mb-4 text-start">
+              <li><i class="fas fa-check text-success"></i> Full-Stack Development</li>
+              <li><i class="fas fa-check text-success"></i> Cloud & Database Skills</li>
+              <li><i class="fas fa-check text-success"></i> Agile Methodology</li>
+              <li><i class="fas fa-check text-success"></i> Problem Solving</li>
+            </ul>
+            <button class="btn btn-warning text-dark fw-bold" data-bs-toggle="modal" data-bs-target="#applyModal" data-job="Software Engineer">Apply Now</button>
+          </div>
+        </div>
+
+        <!-- Data Scientist -->
+        <div class="col-md-4">
+          <div class="card job-card h-100 p-4 text-center">
+            <i class="fas fa-chart-line job-icon"></i>
+            <h4 class="fw-bold mb-3">Data Scientist</h4>
+            <ul class="list-unstyled mb-4 text-start">
+              <li><i class="fas fa-check text-success"></i> Machine Learning & AI</li>
+              <li><i class="fas fa-check text-success"></i> Data Analytics</li>
+              <li><i class="fas fa-check text-success"></i> Python & SQL</li>
+              <li><i class="fas fa-check text-success"></i> Data Visualization</li>
+            </ul>
+            <button class="btn btn-warning text-dark fw-bold" data-bs-toggle="modal" data-bs-target="#applyModal" data-job="Data Scientist">Apply Now</button>
+          </div>
+        </div>
+
+        <!-- UX/UI Designer -->
+        <div class="col-md-4">
+          <div class="card job-card h-100 p-4 text-center">
+            <i class="fas fa-pencil-ruler job-icon"></i>
+            <h4 class="fw-bold mb-3">UX/UI Designer</h4>
+            <ul class="list-unstyled mb-4 text-start">
+              <li><i class="fas fa-check text-success"></i> Wireframing & Prototyping</li>
+              <li><i class="fas fa-check text-success"></i> User Research</li>
+              <li><i class="fas fa-check text-success"></i> Adobe XD / Figma</li>
+              <li><i class="fas fa-check text-success"></i> Visual Design</li>
+            </ul>
+            <button class="btn btn-warning text-dark fw-bold" data-bs-toggle="modal" data-bs-target="#applyModal" data-job="UX/UI Designer">Apply Now</button>
+          </div>
+        </div>
+
+        <!-- Science Teacher -->
+        <div class="col-md-4">
+          <div class="card job-card h-100 p-4 text-center">
+            <i class="fas fa-flask job-icon"></i>
+            <h4 class="fw-bold mb-3">Science Teacher</h4>
+            <ul class="list-unstyled mb-4 text-start">
+              <li><i class="fas fa-check text-success"></i> Physics, Chemistry, Biology</li>
+              <li><i class="fas fa-check text-success"></i> Lesson Planning</li>
+              <li><i class="fas fa-check text-success"></i> Classroom Management</li>
+              <li><i class="fas fa-check text-success"></i> Assessment Skills</li>
+            </ul>
+            <button class="btn btn-warning text-dark fw-bold" data-bs-toggle="modal" data-bs-target="#applyModal" data-job="Science Teacher">Apply Now</button>
+          </div>
+        </div>
+
+        <!-- IT Instructor -->
+        <div class="col-md-4">
+          <div class="card job-card h-100 p-4 text-center">
+            <i class="fas fa-network-wired job-icon"></i>
+            <h4 class="fw-bold mb-3">IT Instructor</h4>
+            <ul class="list-unstyled mb-4 text-start">
+              <li><i class="fas fa-check text-success"></i> Programming (Python, JavaScript)</li>
+              <li><i class="fas fa-check text-success"></i> Networking & Security</li>
+              <li><i class="fas fa-check text-success"></i> E-Learning Tools</li>
+              <li><i class="fas fa-check text-success"></i> Curriculum Design</li>
+            </ul>
+            <button class="btn btn-warning text-dark fw-bold" data-bs-toggle="modal" data-bs-target="#applyModal" data-job="IT Instructor">Apply Now</button>
+          </div>
+        </div>
+
+        <!-- Software Developer -->
+        <div class="col-md-4">
+          <div class="card job-card h-100 p-4 text-center">
+            <i class="fas fa-code job-icon"></i>
+            <h4 class="fw-bold mb-3">Software Developer</h4>
+            <ul class="list-unstyled mb-4 text-start">
+              <li><i class="fas fa-check text-success"></i> Full-stack Development</li>
+              <li><i class="fas fa-check text-success"></i> Web & Mobile Apps</li>
+              <li><i class="fas fa-check text-success"></i> Database Management</li>
+              <li><i class="fas fa-check text-success"></i> Agile Methodologies</li>
+            </ul>
+            <button class="btn btn-warning text-dark fw-bold" data-bs-toggle="modal" data-bs-target="#applyModal" data-job="Software Developer">Apply Now</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Apply Form -->
+  <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-[#001f54] text-white">
+          <h5 class="modal-title" id="applyModalLabel">Apply for <span id="jobTitle"></span></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="https://formspree.io/f/xzzvqdrn" method="POST" class="p-3">
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" name="phone">
+          </div>
+          <div class="mb-3">
+            <label for="skills" class="form-label">Relevant Skills</label>
+            <textarea class="form-control" id="skills" name="skills" rows="3"></textarea>
+          </div>
+          <input type="hidden" id="jobField" name="job">
+          <button type="submit" class="btn btn-warning text-dark fw-bold w-100">Submit Application</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Youngtec Portal</h5>
+          <p>Empowering students with technology, creativity, and problem-solving skills for a brighter future.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="corevalues.html">Core Values</a></li>
+            <li><a href="career-programs.html">Career Programs</a></li>
+            <li><a href="opportunities.html">Opportunities</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Contact Us</h5>
+          <p>Email: info@youngtec.com</p>
+          <p>Phone: +234 816 386 0415</p>
+          <p>WhatsApp: +234 907 318 5861</p>
+        </div>
+      </div>
+      <div class="text-center mt-4 small">© 1998-2025 Youngtec Portal. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const applyModal = document.getElementById('applyModal');
+    applyModal.addEventListener('show.bs.modal', event => {
+      const button = event.relatedTarget;
+      const job = button.getAttribute('data-job');
+      const jobTitle = applyModal.querySelector('#jobTitle');
+      const jobField = applyModal.querySelector('#jobField');
+      jobTitle.textContent = job;
+      jobField.value = job;
+    });
+  </script>
+
+</body>
+</html>

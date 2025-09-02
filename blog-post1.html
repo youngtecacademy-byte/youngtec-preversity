@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Youngtec Computers unveils brand new state‑of‑the‑art labs designed for hands‑on learning and innovation." />
+  <title>New State‑of‑the‑Art Labs Open | Youngtec Computers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Brand palette: Navy + Yellow */
+      --brand-navy-900: #0b1b3a;
+      --brand-navy-800: #122756;
+      --brand-navy-700: #17346e;
+      --brand-navy-600: #1e4189;
+      --brand-navy-500: #2450a7;
+      --brand-yellow-400: #f7c948; /* warm accent */
+      --brand-yellow-500: #f3b61f;
+      --brand-bg: #f7f9fc;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e5e7eb;
+      --card: #ffffff;
+      --shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: linear-gradient(180deg, #f8fafc 0%, var(--brand-bg) 100%);
+    }
+
+    /* Top progress bar */
+    .read-progress {
+      position: fixed; inset: 0 0 auto 0; height: 4px;
+      background: linear-gradient(90deg, var(--brand-yellow-400), var(--brand-yellow-500));
+      transform-origin: left;
+      transform: scaleX(0);
+      z-index: 1000;
+    }
+
+    /* Navbar */
+    .navwrap { position: sticky; top: 0; z-index: 999; }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; padding: 14px 20px; border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(180deg, var(--brand-navy-900) 0%, var(--brand-navy-800) 100%);
+      color: #eef2ff; box-shadow: 0 8px 24px rgba(2,6,23,0.25);
+      backdrop-filter: saturate(1.2) blur(6px);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+    .brand img { width: 42px; height: 42px; object-fit: contain; border-radius: 10px; background: #fff; padding: 4px; box-shadow: var(--shadow); }
+    .brand .title { font-weight: 800; letter-spacing: 0.3px; }
+    .brand .subtitle { display:block; font-size: 12px; color:#cbd5e1; margin-top: 2px; letter-spacing: .5px; }
+
+    .navlinks { display:flex; gap: 18px; align-items:center; }
+    .navlinks a { color:#e2e8f0; text-decoration:none; font-weight:600; font-size: 15px; padding:10px 12px; border-radius: 10px; }
+    .navlinks a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+
+    .cta { background: var(--brand-yellow-400); color: #111827 !important; box-shadow: 0 6px 16px rgba(247, 201, 72, .45); }
+    .cta:hover { filter: brightness(0.98); }
+
+    .hamburger { display:none; border:1px solid rgba(255,255,255,.2); border-radius: 10px; padding: 8px 10px; cursor:pointer; }
+    .hamburger span { display:block; width: 22px; height: 2px; background:#fff; margin:5px 0; border-radius:2px; }
+
+    /* Mobile drawer */
+    .drawer { display:none; background: var(--brand-navy-900); color:#e2e8f0; padding:14px 20px; border-bottom:1px solid rgba(255,255,255,.08); }
+    .drawer a { display:block; color:#e2e8f0; text-decoration:none; padding:10px 0; border-bottom:1px dashed rgba(255,255,255,.1); }
+    .drawer a:last-child { border-bottom: 0; }
+
+    /* Hero */
+    .hero {
+      position: relative; overflow: clip; isolation: isolate;
+      background: radial-gradient(1200px 600px at 5% -20%, rgba(36,80,167,0.5) 0%, rgba(36,80,167,0) 65%),
+                  radial-gradient(1200px 600px at 95% -20%, rgba(247,201,72,0.4) 0%, rgba(247,201,72,0) 65%),
+                  linear-gradient(180deg, var(--brand-navy-900) 0%, var(--brand-navy-800) 60%, var(--brand-navy-700) 100%);
+      color: #fff; padding: 72px 20px 48px;
+    }
+    .hero .container { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1.25fr .75fr; gap: 36px; align-items: end; }
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:1.2px; color:#0b1b3a; background: var(--brand-yellow-400); padding:8px 12px; border-radius: 999px; }
+    .title-xl { font-size: clamp(28px, 5vw, 46px); line-height: 1.1; margin: 16px 0 10px; font-weight: 800; }
+    .post-meta { color:#cbd5e1; font-size: 14px; }
+    .cover {
+      width:100%; aspect-ratio: 16/10; border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(255,255,255,.16), rgba(255,255,255,.05));
+      border: 1px solid rgba(255,255,255,.15); box-shadow: 0 20px 50px rgba(0,0,0,.35);
+      overflow: hidden; position: relative;
+    }
+    .cover img { width:100%; height:100%; object-fit: cover; display:block; filter: saturate(1.05) contrast(1.02); }
+
+    /* Main layout */
+    .main { max-width: 1120px; margin: -40px auto 80px; padding: 0 20px; display: grid; grid-template-columns: 1fr 320px; gap: 28px; }
+    article { background: var(--card); border:1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px; }
+    article h2 { margin-top: 26px; font-size: clamp(22px, 2.3vw, 28px); }
+    article p { color: var(--muted); line-height: 1.8; }
+    article ul { color: var(--muted); line-height: 1.8; }
+    .blockquote { border-left: 4px solid var(--brand-yellow-400); padding: 8px 16px; margin: 18px 0; background: #fffbeb; border-radius: 10px; }
+
+    .sharebar { display:flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+    .sharebar a { text-decoration:none; font-weight:700; padding:10px 14px; border-radius: 10px; border:1px solid var(--border); background:#fff; box-shadow: var(--shadow); }
+
+    /* Sidebar */
+    aside { position: sticky; top: 96px; height: fit-content; }
+    .card { background: var(--card); border:1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px; }
+    .card + .card { margin-top: 18px; }
+    .subscribe input[type="email"] { width:100%; padding: 12px 14px; border-radius: 12px; border:1px solid var(--border); }
+    .subscribe button { width:100%; margin-top: 10px; padding: 12px 14px; border-radius: 12px; border:0; font-weight:800; background: var(--brand-yellow-400); }
+
+    .badge { display:inline-flex; align-items:center; gap:8px; font-size:12px; color:#0b1b3a; background: #fde68a; padding:6px 10px; border-radius: 999px; font-weight:700; }
+
+    /* Footer */
+    footer { margin-top: 80px; background: linear-gradient(180deg, var(--brand-navy-800) 0%, var(--brand-navy-900) 100%); color:#e2e8f0; }
+    .footer-wrap { max-width: 1120px; margin: 0 auto; padding: 56px 20px; display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 26px; }
+    .footer-brand { display:flex; gap: 14px; }
+    .footer-brand img { width: 52px; height: 52px; background:#fff; padding:6px; border-radius: 12px; box-shadow: var(--shadow); }
+    .footer-links a { display:block; color:#cbd5e1; text-decoration:none; padding: 6px 0; }
+    .footer-links a:hover { color:#fff; }
+    .copyright { border-top:1px solid rgba(255,255,255,.08); padding: 16px 20px; text-align:center; font-size: 14px; color:#94a3b8; }
+
+    /* Utilities */
+    .container { max-width: 1120px; margin: 0 auto; }
+    .pill { display:inline-block; padding: 8px 12px; border-radius: 999px; border:1px dashed var(--border); background:#fff; font-size: 12px; color: var(--muted); }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .hero .container, .main { grid-template-columns: 1fr; }
+      aside { position: relative; top: 0; }
+    }
+    @media (max-width: 760px) {
+      .navlinks { display:none; }
+      .hamburger { display:block; }
+      .brand img { width: 38px; height: 38px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Reading progress bar -->
+  <div class="read-progress" id="readProgress"></div>
+
+  <!-- Navbar -->
+  <div class="navwrap">
+    <nav class="nav">
+      <a href="#" class="brand" aria-label="Youngtec Computers Home">
+        <img src="images/Logo-new.png" alt="Youngtec Computers Logo" />
+        <div>
+          <span class="title">Youngtec Computers</span>
+          <small class="subtitle">Learn • Build • Innovate</small>
+        </div>
+      </a>
+      <div class="navlinks" role="navigation" aria-label="primary">
+        <a href="index.html">Home</a>
+        <a href="courseware.html">Courseware</a>
+        <a href="academics.html">Academics</a>
+        <a href="community.html">Community</a>
+        <a class="cta" href="enroll.html">Subscribe</a>
+      </div>
+      <button class="hamburger" id="menuBtn" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="drawer" id="mobileMenu" role="navigation" aria-label="mobile">
+      <a href="index.html">Home</a>
+      <a href="courseware.html">Courseware</a>
+      <a href="academics.html">Academics</a>
+      <a href="community.html">Community</a>
+      <a href="enroll.html">Subscribe</a>
+    </div>
+  </div>
+
+  <!-- Hero / Post header -->
+  <header class="hero">
+    <div class="container">
+      <div>
+        <span class="eyebrow">Announcement</span>
+        <h1 class="title-xl">New State‑of‑the‑Art Labs Open</h1>
+        <p class="post-meta">Published <time datetime="2025-08-24">August 24, 2025</time> · by Youngtec Team · 4 min read</p>
+      </div>
+      <div class="cover" aria-hidden="true">
+        <img src="images/lab-open-hero.jpeg" alt="Modern computer lab with high-end PCs and students collaborating" />
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+    <article id="article">
+      <p>We are thrilled to announce the grand opening of our <strong>state‑of‑the‑art computer and innovation labs</strong>—purpose‑built spaces where students learn by doing. From coding and robotics to digital design and AI, these labs are engineered to spark curiosity and accelerate mastery.</p>
+
+      <div class="blockquote">
+        <p><strong>Why it matters:</strong> Learning tools shape learning outcomes. With pro‑grade equipment and an industry‑style setup, students develop confidence and skills that transfer directly to the real world.</p>
+      </div>
+
+      <h2>What’s Inside the New Labs</h2>
+      <ul>
+        <li><strong>High‑Performance Workstations:</strong> Latest‑gen multi‑core PCs with SSD storage for blazing‑fast workflows.</li>
+        <li><strong>Dual‑Monitor Setups:</strong> Improve focus and productivity during coding, design, and research tasks.</li>
+        <li><strong>Robotics & IoT Bench:</strong> Arduino, micro:bit, and sensors for hands‑on electronics and prototyping.</li>
+        <li><strong>Creator Studio:</strong> Graphics tablets, photo/video gear, and a mini‑sound booth for content production.</li>
+        <li><strong>Fast & Filtered Network:</strong> Secure, high‑speed internet with responsible access controls.</li>
+        <li><strong>Power & Backup:</strong> Stabilized power with UPS and generator support for uninterrupted learning.</li>
+      </ul>
+
+      <h2>Designed for Teaching & Teamwork</h2>
+      <p>Each lab features flexible seating, instructor projection, and collaboration corners. Whiteboards and quick‑connect screens make it natural to brainstorm, demo, and iterate. Safety, accessibility, and ergonomics were top priorities throughout the build.</p>
+
+      <h2>Programs You Can Start Right Away</h2>
+      <ul>
+        <li>Computer Literacy & Digital Skills</li>
+        <li>Graphics Design & Content Creation</li>
+        <li>Web Design & Full‑Stack Development</li>
+        <li>Mobile App Development</li>
+        <li>Robotics, IoT & Embedded Systems</li>
+        <li>Intro to AI & Data Fundamentals</li>
+      </ul>
+
+      <h2>Visit & Enrollment</h2>
+      <p>Tours are available by appointment. Parents, educators, and prospective students are welcome to experience the labs and speak with our instructors about placements and schedules.</p>
+
+      <div class="sharebar" aria-label="share this post">
+        <a href="#" onclick="share('facebook'); return false;" aria-label="Share on Facebook">Share on Facebook</a>
+        <a href="#" onclick="share('twitter'); return false;" aria-label="Share on X / Twitter">Share on X</a>
+        <a href="#" onclick="share('whatsapp'); return false;" aria-label="Share on WhatsApp">Share on WhatsApp</a>
+        <a href="#" onclick="copyLink(); return false;" aria-label="Copy article link">Copy Link</a>
+      </div>
+    </article>
+
+    <aside>
+      <div class="card">
+        <div class="badge">Now Open</div>
+        <h3 style="margin:10px 0 6px;">Book a Lab Tour</h3>
+        <p style="color:var(--muted);">See the spaces, meet instructors, and explore programs.</p>
+        <a class="cta" href="enroll.html" style="display:inline-block; text-decoration:none; padding: 10px 14px; border-radius: 10px; margin-top: 6px;">Schedule Visit</a>
+      </div>
+
+      <div class="card subscribe" id="subscribe">
+        <h3 style="margin:0 0 10px;">Subscribe for Updates</h3>
+        <p style="color:var(--muted);">Get news on new intakes, workshops, and scholarships.</p>
+        <form action="https://formspree.io/f/xzzvqdrn" method="POST">
+          <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 10px;">Related Posts</h3>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="margin-bottom: 10px;"><a href="blog-post2.html" style="text-decoration:none; font-weight:600;">Hackathon Week: From Idea to Demo</a></li>
+          <li style="margin-bottom: 10px;"><a href="blog-post3.html" style="text-decoration:none; font-weight:600;">How We Teach AI to Kids</a></li>
+          <li><a href="blog-post4.html" style="text-decoration:none; font-weight:600;">Parent’s Guide to Digital Safety</a></li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-wrap">
+      <div>
+        <div class="footer-brand">
+          <img src="images/Logo-new.png" alt="Youngtec Computers logo" />
+          <div>
+            <h3 style="margin:0 0 6px;">Youngtec Computers</h3>
+            <p style="margin:0; color:#cbd5e1;">Empowering learners to build with technology—one project at a time.</p>
+          </div>
+        </div>
+        <p style="margin-top:14px; color:#cbd5e1;">Agbon Market Area, Iyana Church, Ibadan, Nigeria<br>+234 816 386 0415 · +234 907 318 5861</p>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="courseware.html">Courseware</a>
+        <a href="hot-courses.html">Hot Courses</a>
+        <a href="blog.html">Blog</a>
+      </div>
+      <div class="footer-links">
+        <h4>Programs</h4>
+        <a href="computer-literacy-details.html">Computer Literacy</a>
+        <a href="graphics-design-details.html">Graphics Design</a>
+        <a href="web-design-details.html">Web Design</a>
+        <a href="mobile-development-details.html">Mobile Development</a>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <a href="https://www.facebook.com/groups/148103598674098">Facebook</a>
+        <a href="https://www.youtube.com/channel/UCnTxdNg7JVQakexncCTgUYA">YouTube</a>
+        <a href="https://x.com/YoungtecCom/status/1958753041932271717">Twitter / X</a>
+        <a href="https://api.whatsapp.com/send/?phone=2348163860415&text&type=phone_number&app_absent=0">WhatsApp</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> 1998-2025 Computers. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.style.display = expanded ? 'none' : 'block';
+    });
+
+    // Reading progress bar
+    const progress = document.getElementById('readProgress');
+    const article = document.getElementById('article');
+    function updateProgress(){
+      if(!article) return;
+      const rect = article.getBoundingClientRect();
+      const total = article.offsetHeight - window.innerHeight + 100; // padding to finish near end
+      const scrolled = Math.min(Math.max(window.scrollY - (article.offsetTop - 60), 0), total);
+      const ratio = total > 0 ? scrolled / total : 0;
+      progress.style.transform = `scaleX(${ratio})`;
+    }
+    document.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('load', updateProgress);
+
+    // Share helpers
+    function copyLink(){
+      navigator.clipboard.writeText(location.href).then(() => {
+        alert('Link copied to clipboard!');
+      });
+    }
+    function share(network){
+      const url = encodeURIComponent(location.href);
+      const text = encodeURIComponent('New State‑of‑the‑Art Labs Open');
+      const map = {
+        facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+        twitter: `https://twitter.com/intent/tweet?url=${url}&text=${text}`,
+        whatsapp: `https://api.whatsapp.com/send?text=${text}%20${url}`
+      };
+      const w = 640, h = 520, y = (screen.height-h)/2, x = (screen.width-w)/2;
+      window.open(map[network], '_blank', `width=${w},height=${h},left=${x},top=${y}`);
+    }
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

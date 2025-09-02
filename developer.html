@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet the Developer | Youngtec Digital</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      background: linear-gradient(135deg, #1a237e, #3949ab);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    nav h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffca28;
+    }
+
+    /* Layout */
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 6rem;
+      height: fit-content;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .sidebar h3 {
+      margin-bottom: 0.8rem;
+      color: #1a237e;
+    }
+
+    .sidebar p {
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+      color: #555;
+    }
+
+    .sidebar .social-links a {
+      font-size: 1.3rem;
+      margin-right: 0.7rem;
+      color: #1a237e;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .sidebar .social-links a:hover {
+      color: #ff6f00;
+      transform: translateY(-3px);
+    }
+
+    .categories ul {
+      list-style: none;
+    }
+
+    .categories ul li {
+      margin: 0.5rem 0;
+    }
+
+    .categories ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    .categories ul li a:hover {
+      color: #1a237e;
+    }
+
+    /* Main Content */
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .profile-card {
+      background: #fff;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      border: 3px solid transparent;
+      background-image: linear-gradient(#fff, #fff), 
+        linear-gradient(135deg, #1a237e, #ff6f00);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      text-align: center;
+      animation: fadeUp 1.2s ease;
+    }
+
+    .profile-card img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 5px solid #ffca28;
+      transition: transform 0.4s ease;
+    }
+
+    .profile-card img:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    .profile-card h2 {
+      color: #1a237e;
+      margin-bottom: 0.3rem;
+    }
+
+    .profile-card p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .bio-section {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      animation: fadeIn 1.2s ease;
+    }
+
+    .bio-section h3 {
+      margin-bottom: 1rem;
+      color: #1a237e;
+      font-size: 1.3rem;
+    }
+
+    .bio-section p {
+      margin-bottom: 1.2rem;
+      color: #444;
+    }
+
+    .explore-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .explore-links a {
+      background: linear-gradient(135deg, #1a237e, #3949ab);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.6rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .explore-links a:hover {
+      background: linear-gradient(135deg, #ff6f00, #ffca28);
+      color: #1a237e;
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer {
+      background: #1a237e;
+      color: #fff;
+      text-align: center;
+      padding: 1.2rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        order: 2;
+      }
+
+      .main-content {
+        order: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1>Youngtec Computers</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="author.html">Best Sellers</a></li>
+      <li><a href="developer.html">Developer</a></li>
+      <li><a href="e-library.html">E-Library</a></li>
+    </ul>
+  </nav>
+
+  <!-- Container -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>About Author & Developer</h3>
+      <p>I am passionate about writing, coding, and helping the next generation of learners discover technology and faith.</p>
+      
+      <h3>Follow & Subscribe</h3>
+      <div class="social-links">
+        <a href="https://web.facebook.com/akogun.olusola"><i class="ri-facebook-fill"></i></a>
+        <a href="https://x.com/YoungtecCom/status/1958753041932271717"><i class="ri-twitter-x-line"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=2348163860415&text&type=phone_number&app_absent=0"><i class="ri-instagram-line"></i></a>
+        <a href="https://www.youtube.com/channel/UCnTxdNg7JVQakexncCTgUYA"><i class="ri-youtube-fill"></i></a>
+      </div>
+
+      <h3>Categories</h3>
+      <div class="categories">
+        <ul>
+          <li><a href="codingdev.html">Coding & Development</a></li>
+          <li><a href="digitalbooks.html">Digital Books</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="https://selar.com/m/youngteccomputers">Faith & Inspiration</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <section class="main-content">
+      <div class="profile-card">
+        <img src="images/imgdir.JPG" alt="Developer">
+        <h2>Olusola A. Akogun</h2>
+
+        <p>Author • Developer • Teacher • Visionary</p>
+      </div>
+
+      <div class="bio-section">
+        <h3>About Me</h3>
+        <p>Hello, I am Olusola Akogun, the mind behind Youngtec Digital and Living Life Ministries. 
+        I blend technology, education, and faith to build tools that empower young minds. 
+        My passion is creating simple but powerful solutions — from eBooks to software like SmartExam Suite.</p>
+
+        <h3>What I Do</h3>
+        <p>I write, teach, and develop systems that transform education and ministry. Whether it’s coding projects, digital libraries, or inspiring books, my work is designed to serve people and glorify God.</p>
+
+        <div class="explore-links">
+          <a href="author.html">Explore My Books</a>
+          <a href="e-library.html">Visit E-Library</a>
+          <a href="smartexam.html">SmartExam Suite</a>
+          <a href="index.html">Youngtec Computers</a>
+          <a href="student-portal.html">Student Portal</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Youngtec Digital. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

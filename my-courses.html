@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Courses | Youngtec Academy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fa;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #002147;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .navbar h1 {
+      font-size: 20px;
+      margin: 0;
+      color: yellow;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      margin-left: 20px;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .navbar ul li a:hover {
+      color: yellow;
+    }
+
+    /* Page Header */
+    .page-header {
+      background: linear-gradient(to right, #002147, #00509e);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .page-header h2 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    /* Courses Section */
+    .courses-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .course-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.2s;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .course-card h3 {
+      color: #002147;
+      margin-top: 0;
+    }
+
+    .course-card p {
+      font-size: 14px;
+      margin: 10px 0;
+    }
+
+    .course-card a {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #002147;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .course-card a:hover {
+      background-color: #00509e;
+    }
+
+    /* Footer */
+    footer {
+      background: #002147;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Youngtec Logo">
+    </div>
+    <ul>
+      <li><a href="student-portal.html">Dashboard</a></li>
+      <li><a href="my-courses.html">Courses</a></li>
+      <li><a href="messages.html">Messages</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="logout.html">Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h2>📚 Personalised Courses</h2>
+    <p>View and continue your enrolled courses</p>
+  </div>
+
+  <!-- Courses List -->
+  <div class="courses-container">
+    <div class="course-card">
+      <h3>Beginner Coding Bootcamp</h3>
+      <p>Learn HTML, CSS, and JavaScript from scratch.</p>
+      <a href="bootcamp-course.html">Continue</a>
+    </div>
+
+    <div class="course-card">
+      <h3>Python Programming Essentials</h3>
+      <p>Master Python for automation, data analysis, and AI projects.</p>
+      <a href="python-course.html">Continue</a>
+    </div>
+
+    <div class="course-card">
+      <h3>Full-Stack Web Development</h3>
+      <p>Learn front-end and back-end technologies to become a pro developer.</p>
+      <a href="fullstack-course.html">Continue</a>
+    </div>
+
+    <div class="course-card">
+      <h3>Database Management Skills</h3>
+      <p>Master SQL and relational databases for real-world applications.</p>
+      <a href="database-course.html">Continue</a>
+    </div>
+
+    <div class="course-card">
+      <h3>Laptop Repair Skills</h3>
+      <p>Master Laptop Repair in 21 Days to Start Earning.</p>
+      <a href="laptop-repair.html">Continue</a>
+    </div>
+
+    <div class="course-card">
+      <h3>Artificial Intellegence</h3>
+      <p>Learn Experts techniques and technologies to become a AI developer.</p>
+      <a href="ai-productivity.html">Continue</a>
+    </div>
+
+    <div class="course-card">
+      <h3>Computer Engineering</h3>
+      <p>Master core engineering mathematics and physics concepts.</p>
+      <a href="course-engineering.html">Continue</a>
+    </div>
+
+  </div>
+
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Youngtec Computers Academy. All Rights Reserved.</p>
+    <p>Empowering the Next Generation with Technology</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "question": "How do I log in to the Student Portal?",
+    "answer": "Click on the 'Login' button at the top-right corner of the portal homepage, then enter your registered email and password. If you forget your password, use the 'Forgot Password' link to reset."
+  },
+  {
+    "question": "How can I update my profile information?",
+    "answer": "After logging in, go to 'My Profile' under the Dashboard. You can edit details like phone number, address, and emergency contact. Some fields such as your student ID cannot be changed."
+  },
+  {
+    "question": "How do I access my results?",
+    "answer": "Your results will be available under the 'Results' section of your Dashboard. Results are uploaded after verification by the academic office."
+  },
+  {
+    "question": "Can I pay my school fees through the portal?",
+    "answer": "Yes, the Student Portal supports online payments. Navigate to 'Payments' in your Dashboard to view outstanding fees and complete payment securely."
+  },
+  {
+    "question": "What should I do if I face technical issues?",
+    "answer": "If you encounter any issues, use the live chat support on the bottom-right corner of the portal or contact support via WhatsApp or Call directly from the portal."
+  },
+  {
+    "question": "How do I borrow or download books from the E-Library?",
+    "answer": "Go to the 'E-Library' section from your Dashboard. You can preview books online, borrow them if they are lending-enabled, or download digital copies if permitted."
+  }
+]

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How We Teach AI to Kids | Youngtec Computers</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #001f3f;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header img {
+      height: 50px;
+    }
+    nav a {
+      color: #ffcc00;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: linear-gradient(rgba(0, 31, 63, 0.8), rgba(0, 31, 63, 0.8)), url('images/ai-to-kids.jpeg') center/cover no-repeat;
+      color: #fff;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    .content {
+      display: flex;
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    article {
+      flex: 3;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    article h2 {
+      color: #001f3f;
+    }
+    aside {
+      flex: 1;
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .share {
+      margin-top: 2rem;
+    }
+    .share button {
+      background: #001f3f;
+      color: #ffcc00;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-right: 0.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #001f3f;
+      color: #fff;
+      padding: 3rem 2rem;
+      margin-top: 3rem;
+    }
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .footer-container h3 {
+      color: #ffcc00;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 2rem;
+      border-top: 1px solid #444;
+      padding-top: 1rem;
+      font-size: 0.9rem;
+    }
+    /* Progress Bar */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 5px;
+      background: #ffcc00;
+      width: 0%;
+      z-index: 2000;
+    }
+  </style>
+</head>
+<body>
+  <div id="progress-bar"></div>
+  <header>
+    <img src="images/logo.png" alt="Youngtec Computers Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="blog.html">Blog</a>
+      <a href="blog-post1.html">New Labs</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>How We Teach AI to Kids</h1>
+    <p>Making Artificial Intelligence fun, simple, and inspiring for the next generation.</p>
+  </section>
+
+  <section class="content">
+    <article>
+      <h2>Breaking Down Big Ideas</h2>
+      <p>At Youngtec, we believe kids can learn AI if it’s explained in simple, relatable ways. We break down concepts like algorithms, data, and pattern recognition into everyday examples children can connect with.</p>
+
+      <h2>Learning by Playing</h2>
+      <p>Through games, puzzles, and coding exercises, children learn the principles of AI hands-on. We use fun challenges that spark curiosity and creativity, so kids don’t just learn—they explore.</p>
+
+      <h2>Safe and Guided Exploration</h2>
+      <p>We introduce children to AI tools in a safe, guided environment. This way, they learn both the benefits and responsibilities of working with technology that can think, predict, and create.</p>
+
+      <h2>Inspiring Future Innovators</h2>
+      <p>Our goal is not only to teach AI but to inspire kids to use it responsibly to solve problems in their communities and beyond. By starting early, we prepare them to become thoughtful innovators.</p>
+
+      <div class="share">
+        <p><strong>Share this post:</strong></p>
+        <button onclick="share('facebook')">Facebook</button>
+        <button onclick="share('twitter')">Twitter</button>
+        <button onclick="share('linkedin')"></button>
+      </div>
+    </article>
+
+    <aside>
+      <h3>More Articles</h3>
+      <ul>
+        <li><a href="blog-post1.html">New State-of-the-Art Labs Open</a></li>
+        <li><a href="blog-post2.html">Why Coding Matters for Every Student</a></li>
+      </ul>
+      <h3>Subscribe</h3>
+      <form action="https://formspree.io/f/xzzvqdrn" method="POST">
+        <input type="email" name="email" placeholder="Your Email" required style="width:100%; padding:0.5rem; margin-bottom:0.5rem;">
+        <button type="submit" style="width:100%; background:#001f3f; color:#ffcc00; padding:0.5rem; border:none; border-radius:5px; cursor:pointer;">Subscribe</button>
+      </form>
+    </aside>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h3>About Us</h3>
+        <p>Youngtec Computers is dedicated to empowering the next generation with digital skills, from basic literacy to advanced AI learning.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul style="list-style:none; padding:0;">
+          <li><a href="index.html" style="color:#fff; text-decoration:none;">Home</a></li>
+          <li><a href="courses.html" style="color:#fff; text-decoration:none;">Courses</a></li>
+          <li><a href="blog.html" style="color:#fff; text-decoration:none;">Blog</a></li>
+          <li><a href="contact.html" style="color:#fff; text-decoration:none;">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>Email: info@youngtec.com</p>
+        <p>Phone: +234 816 386 0415</p>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2025 Youngtec Computers. All rights reserved.</div>
+  </footer>
+
+  <script>
+    function share(platform) {
+      const url = window.location.href;
+      const text = document.title;
+      let shareUrl = '';
+      if (platform === 'facebook') shareUrl = `https://www.facebook.com/groups/148103598674098`;
+      if (platform === 'twitter') shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+      if (platform === 'youtube') shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${text}`;
+      window.open(shareUrl, '_blank');
+    }
+
+    // Progress bar scroll effect
+    window.onscroll = function() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Youngtec Computers students showcase their creativity during Hackathon Week—from ideas to working demos." />
+  <title>Hackathon Week: From Idea to Demo | Youngtec Computers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Brand palette: Navy + Yellow */
+      --brand-navy-900: #0b1b3a;
+      --brand-navy-800: #122756;
+      --brand-navy-700: #17346e;
+      --brand-navy-600: #1e4189;
+      --brand-navy-500: #2450a7;
+      --brand-yellow-400: #f7c948; /* warm accent */
+      --brand-yellow-500: #f3b61f;
+      --brand-bg: #f7f9fc;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e5e7eb;
+      --card: #ffffff;
+      --shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: linear-gradient(180deg, #f8fafc 0%, var(--brand-bg) 100%);
+    }
+
+    /* Top progress bar */
+    .read-progress {
+      position: fixed; inset: 0 0 auto 0; height: 4px;
+      background: linear-gradient(90deg, var(--brand-yellow-400), var(--brand-yellow-500));
+      transform-origin: left;
+      transform: scaleX(0);
+      z-index: 1000;
+    }
+
+    /* Navbar */
+    .navwrap { position: sticky; top: 0; z-index: 999; }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; padding: 14px 20px; border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(180deg, var(--brand-navy-900) 0%, var(--brand-navy-800) 100%);
+      color: #eef2ff; box-shadow: 0 8px 24px rgba(2,6,23,0.25);
+      backdrop-filter: saturate(1.2) blur(6px);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+    .brand img { width: 42px; height: 42px; object-fit: contain; border-radius: 10px; background: #fff; padding: 4px; box-shadow: var(--shadow); }
+    .brand .title { font-weight: 800; letter-spacing: 0.3px; }
+    .brand .subtitle { display:block; font-size: 12px; color:#cbd5e1; margin-top: 2px; letter-spacing: .5px; }
+
+    .navlinks { display:flex; gap: 18px; align-items:center; }
+    .navlinks a { color:#e2e8f0; text-decoration:none; font-weight:600; font-size: 15px; padding:10px 12px; border-radius: 10px; }
+    .navlinks a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+
+    .cta { background: var(--brand-yellow-400); color: #111827 !important; box-shadow: 0 6px 16px rgba(247, 201, 72, .45); }
+    .cta:hover { filter: brightness(0.98); }
+
+    .hamburger { display:none; border:1px solid rgba(255,255,255,.2); border-radius: 10px; padding: 8px 10px; cursor:pointer; }
+    .hamburger span { display:block; width: 22px; height: 2px; background:#fff; margin:5px 0; border-radius:2px; }
+
+    /* Mobile drawer */
+    .drawer { display:none; background: var(--brand-navy-900); color:#e2e8f0; padding:14px 20px; border-bottom:1px solid rgba(255,255,255,.08); }
+    .drawer a { display:block; color:#e2e8f0; text-decoration:none; padding:10px 0; border-bottom:1px dashed rgba(255,255,255,.1); }
+    .drawer a:last-child { border-bottom: 0; }
+
+    /* Hero */
+    .hero {
+      position: relative; overflow: clip; isolation: isolate;
+      background: radial-gradient(1200px 600px at 5% -20%, rgba(36,80,167,0.5) 0%, rgba(36,80,167,0) 65%),
+                  radial-gradient(1200px 600px at 95% -20%, rgba(247,201,72,0.4) 0%, rgba(247,201,72,0) 65%),
+                  linear-gradient(180deg, var(--brand-navy-900) 0%, var(--brand-navy-800) 60%, var(--brand-navy-700) 100%);
+      color: #fff; padding: 72px 20px 48px;
+    }
+    .hero .container { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1.25fr .75fr; gap: 36px; align-items: end; }
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:1.2px; color:#0b1b3a; background: var(--brand-yellow-400); padding:8px 12px; border-radius: 999px; }
+    .title-xl { font-size: clamp(28px, 5vw, 46px); line-height: 1.1; margin: 16px 0 10px; font-weight: 800; }
+    .post-meta { color:#cbd5e1; font-size: 14px; }
+    .cover {
+      width:100%; aspect-ratio: 16/10; border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(255,255,255,.16), rgba(255,255,255,.05));
+      border: 1px solid rgba(255,255,255,.15); box-shadow: 0 20px 50px rgba(0,0,0,.35);
+      overflow: hidden; position: relative;
+    }
+    .cover img { width:100%; height:100%; object-fit: cover; display:block; filter: saturate(1.05) contrast(1.02); }
+
+    /* Main layout */
+    .main { max-width: 1120px; margin: -40px auto 80px; padding: 0 20px; display: grid; grid-template-columns: 1fr 320px; gap: 28px; }
+    article { background: var(--card); border:1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px; }
+    article h2 { margin-top: 26px; font-size: clamp(22px, 2.3vw, 28px); }
+    article p { color: var(--muted); line-height: 1.8; }
+    article ul { color: var(--muted); line-height: 1.8; }
+    .blockquote { border-left: 4px solid var(--brand-yellow-400); padding: 8px 16px; margin: 18px 0; background: #fffbeb; border-radius: 10px; }
+
+    .sharebar { display:flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+    .sharebar a { text-decoration:none; font-weight:700; padding:10px 14px; border-radius: 10px; border:1px solid var(--border); background:#fff; box-shadow: var(--shadow); }
+
+    /* Sidebar */
+    aside { position: sticky; top: 96px; height: fit-content; }
+    .card { background: var(--card); border:1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px; }
+    .card + .card { margin-top: 18px; }
+    .subscribe input[type="email"] { width:100%; padding: 12px 14px; border-radius: 12px; border:1px solid var(--border); }
+    .subscribe button { width:100%; margin-top: 10px; padding: 12px 14px; border-radius: 12px; border:0; font-weight:800; background: var(--brand-yellow-400); }
+
+    .badge { display:inline-flex; align-items:center; gap:8px; font-size:12px; color:#0b1b3a; background: #fde68a; padding:6px 10px; border-radius: 999px; font-weight:700; }
+
+    /* Footer */
+    footer { margin-top: 80px; background: linear-gradient(180deg, var(--brand-navy-800) 0%, var(--brand-navy-900) 100%); color:#e2e8f0; }
+    .footer-wrap { max-width: 1120px; margin: 0 auto; padding: 56px 20px; display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 26px; }
+    .footer-brand { display:flex; gap: 14px; }
+    .footer-brand img { width: 52px; height: 52px; background:#fff; padding:6px; border-radius: 12px; box-shadow: var(--shadow); }
+    .footer-links a { display:block; color:#cbd5e1; text-decoration:none; padding: 6px 0; }
+    .footer-links a:hover { color:#fff; }
+    .copyright { border-top:1px solid rgba(255,255,255,.08); padding: 16px 20px; text-align:center; font-size: 14px; color:#94a3b8; }
+
+    /* Utilities */
+    .container { max-width: 1120px; margin: 0 auto; }
+    .pill { display:inline-block; padding: 8px 12px; border-radius: 999px; border:1px dashed var(--border); background:#fff; font-size: 12px; color: var(--muted); }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .hero .container, .main { grid-template-columns: 1fr; }
+      aside { position: relative; top: 0; }
+    }
+    @media (max-width: 760px) {
+      .navlinks { display:none; }
+      .hamburger { display:block; }
+      .brand img { width: 38px; height: 38px; }
+    }
+  </style>
+  <link rel="stylesheet" href="blog-shared.css" /> <!-- optional: extract shared styles into one file -->
+</head>
+<body>
+  <div class="read-progress" id="readProgress"></div>
+
+  <!-- Navbar (same as blog-post1.html) -->
+  <div class="navwrap">
+    <nav class="nav">
+      <a href="#" class="brand">
+        <img src="images/logo.png" alt="Youngtec Computers Logo" />
+        <div>
+          <span class="title">Youngtec Computers</span>
+          <small class="subtitle">Learn • Build • Innovate</small>
+        </div>
+      </a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="courseware.html">Courseware</a>
+        <a href="academics.html">Academics</a>
+        <a href="community.html">Community</a>
+        <a class="cta" href="enroll.html">Subscribe</a>
+      </div>
+      <button class="hamburger" id="menuBtn"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="drawer" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="courseware.html">Courseware</a>
+      <a href="academics.html">Academics</a>
+      <a href="community.html">Community</a>
+      <a href="enroll.html">Subscribe</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+      <div>
+        <span class="eyebrow">Event Recap</span>
+        <h1 class="title-xl">Hackathon Week: From Idea to Demo</h1>
+        <p class="post-meta">Published <time datetime="2025-08-24">August 24, 2025</time> · by Youngtec Team · 5 min read</p>
+      </div>
+      <div class="cover">
+        <img src="images/hackathon-bg.jpeg" alt="Students collaborating during Hackathon Week" />
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+    <article id="article">
+      <p>Hackathon Week at Youngtec Computers brought together dozens of bright minds eager to turn bold ideas into working demos. Over five days, students formed teams, brainstormed solutions, and built prototypes that solve real‑world problems.</p>
+
+      <h2>Highlights from the Week</h2>
+      <ul>
+        <li><strong>Day 1:</strong> Team formation and brainstorming workshops.</li>
+        <li><strong>Day 2–3:</strong> Coding sprints and mentorship sessions.</li>
+        <li><strong>Day 4:</strong> Pitch practice and refining prototypes.</li>
+        <li><strong>Day 5:</strong> Demo day—presentations before judges and peers.</li>
+      </ul>
+
+      <div class="blockquote">
+        <p>“The energy was incredible. Students weren’t just coding—they were collaborating, innovating, and thinking like entrepreneurs.”</p>
+      </div>
+
+      <h2>Winning Projects</h2>
+      <ul>
+        <li><strong>Smart Waste Tracker:</strong> An IoT system for monitoring and reducing community waste.</li>
+        <li><strong>EduConnect:</strong> A peer‑to‑peer tutoring app with live video and resource sharing.</li>
+        <li><strong>AgroAI:</strong> An AI‑driven platform helping farmers predict crop yields and pests.</li>
+      </ul>
+
+      <h2>Why Hackathons Matter</h2>
+      <p>Hackathons build teamwork, creativity, and resilience. Students learn to solve problems under pressure while discovering how to pitch and present like professionals.</p>
+
+      <div class="sharebar">
+        <a href="#" onclick="share('facebook'); return false;">Share on Facebook</a>
+        <a href="#" onclick="share('twitter'); return false;">Share on X</a>
+        <a href="#" onclick="share('whatsapp'); return false;">Share on WhatsApp</a>
+        <a href="#" onclick="copyLink(); return false;">Copy Link</a>
+      </div>
+    </article>
+
+    <aside>
+      <div class="card">
+        <div class="badge">Event</div>
+        <h3>Join Next Hackathon</h3>
+        <p>Interested in the next challenge? Register to participate.</p>
+        <a class="cta" href="enroll.html">Register Now</a>
+      </div>
+
+      <div class="card subscribe" id="subscribe">
+        <h3>Subscribe for Updates</h3>
+        <form action="https://formspree.io/f/xzzvqdrn" method="POST">
+          <input type="email" name="email" placeholder="you@example.com" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Related Posts</h3>
+        <ul style="list-style:none; padding:0;">
+          <li><a href="blog-post1.html">New State‑of‑the‑Art Labs Open</a></li>
+          <li><a href="blog-post3.html">How We Teach AI to Kids</a></li>
+          <li><a href="blog-post4.html">Parent’s Guide to Digital Safety</a></li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Footer (same as blog-post1.html) -->
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Youngtec Computers logo" />
+        <div>
+          <h3>Youngtec Computers</h3>
+          <p>Empowering learners to build with technology—one project at a time.</p>
+        </div>
+      </div>
+      <!-- Footer links same as blog-post1.html -->
+    </div>
+    <div class="copyright">© <span id="year"></span> Youngtec Computers. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // Same JS functions from blog-post1.html
+    function copyLink(){ navigator.clipboard.writeText(location.href).then(()=>alert('Link copied!')); }
+    function share(net){ const u=encodeURIComponent(location.href), t=encodeURIComponent(document.title); const m={facebook:`https://www.facebook.com/sharer/sharer.php?u=${u}`, twitter:`https://twitter.com/intent/tweet?url=${u}&text=${t}`, whatsapp:`https://api.whatsapp.com/send?text=${t}%20${u}`}; window.open(m[net],'_blank','width=640,height=520'); }
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>

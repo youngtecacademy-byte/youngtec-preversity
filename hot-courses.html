@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hot Courses | Youngtec Computers</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #001f3f; /* Navy */
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #ffcc00; /* Yellow */
+      text-decoration: none;
+    }
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+    .navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .navbar ul li a:hover {
+      color: #ffcc00;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(0,31,63,0.8), rgba(0,31,63,0.8)), url('images/hot-courses-hero.jpg') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.1rem;
+    }
+
+    /* Courses */
+    .courses {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .course-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.2s ease;
+    }
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+    .course-card h2 {
+      color: #001f3f;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .course-card p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+    .course-card .btn {
+      display: inline-block;
+      background-color: #ffcc00;
+      color: #001f3f;
+      padding: 10px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .course-card .btn:hover {
+      background-color: #e6b800;
+    }
+
+    /* Footer */
+        footer {
+      background-color: #001f3f;
+      color: #fff;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    footer .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    footer h4 {
+      color: #FFD700;
+      margin-bottom: 0.5rem;
+    }
+    footer a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin: 0.25rem 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">Youngtec Computers</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="hot-courses.html ">Hot Courses</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Hot Courses</h1>
+    <p>Explore our most popular programs designed to equip you with real-world digital skills.</p>
+  </section>
+
+  <!-- Courses -->
+  <section class="courses">
+    <div class="course-card">
+      <h2>Computer Literacy</h2>
+      <p>Gain essential computer skills including typing, file management, internet use, and Microsoft Office basics. Perfect for beginners.</p>
+      <p><strong>Duration:</strong> 2 Months</p>
+      <a href="computer-literacy-details.html" class="btn">Learn More</a>
+    </div>
+
+    <div class="course-card">
+      <h2>Graphics Design</h2>
+      <p>Learn professional design tools like Photoshop, CorelDraw, and Canva to create stunning visual content for print and digital media.</p>
+      <p><strong>Duration:</strong> 3 Months</p>
+      <a href="graphics-design-details.html" class="btn">Learn More</a>
+    </div>
+
+    <div class="course-card">
+      <h2>Web Design</h2>
+      <p>Master HTML, CSS, and JavaScript to build responsive, modern websites. A great starting point for a career in tech.</p>
+      <p><strong>Duration:</strong> 3 Months</p>
+      <a href="web-design-details.html" class="btn">Learn More</a>
+    </div>
+
+    <div class="course-card">
+      <h2>Mobile Development</h2>
+      <p>Develop mobile applications for Android and iOS using modern frameworks. Create solutions that impact the mobile-first world.</p>
+      <p><strong>Duration:</strong> 4 Months</p>
+      <a href="mobile-development-details.html" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h4>About Us</h4>
+        <p>Youngtec Computers is dedicated to providing quality IT training and empowering students with digital skills for the future.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="course-career.html">Career</a>
+        <a href="scholarship-results.html">Scholarship</a>
+        <a href="my-courses.html">Personalised Courses</a>
+        <a href="blog-post1.html">Blog</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>📞 +2348163860415<br>📞 +2349073185861</p>
+        <p>📧 info@youngtec.com</p>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:1rem;">&copy; 1998-2025 Youngtec Computers. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

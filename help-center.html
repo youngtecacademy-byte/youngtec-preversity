@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help Center - Youngtec Computers Academy</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; }
+    .search-bar { max-width: 600px; margin: 30px auto; }
+    .faq-category { margin-top: 40px; }
+    footer { background: #222; color: #bbb; padding: 50px 20px; }
+    footer h5 { color: #fff; margin-bottom: 20px; }
+    footer a { color: #bbb; text-decoration: none; }
+    footer a:hover { color: #fff; }
+    .chat-widget { position: fixed; bottom: 20px; right: 20px; z-index: 999; }
+    .chat-btn { background: #25D366; color: white; border-radius: 50%; padding: 18px; font-size: 22px; margin: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+    .call-btn { background: #007bff; }
+    .accordion-button::after { font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Youngtec Academy</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="jobs.html">Jobs</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+        <li class="nav-item"><a class="nav-link active" href="help-center.html">Help Center</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="bg-primary text-white text-center py-5 mt-5">
+  <div class="container">
+    <h1 class="fw-bold">Help Center</h1>
+    <p class="lead">Find answers, contact support, and get the help you need</p>
+  </div>
+</section>
+
+<!-- Search Help Topics -->
+<div class="container">
+  <div class="search-bar">
+    <input type="text" id="helpSearch" class="form-control form-control-lg" placeholder="Search help topics...">
+  </div>
+</div>
+
+<!-- FAQs -->
+<div class="container">
+  <div class="row">
+
+    <!-- Courses -->
+    <div class="col-md-6 faq-category">
+      <h3 class="fw-bold mb-3"><i class="fas fa-book-open text-primary"></i> Courses</h3>
+      <div class="accordion" id="coursesFAQ">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c1">
+              How do I enroll in a course?
+            </button>
+          </h2>
+          <div id="c1" class="accordion-collapse collapse" data-bs-parent="#coursesFAQ">
+            <div class="accordion-body">Go to the Courses page, select a course, and click on "Enroll." Follow the instructions to complete registration.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2">
+              Do courses have certificates?
+            </button>
+          </h2>
+          <div id="c2" class="accordion-collapse collapse" data-bs-parent="#coursesFAQ">
+            <div class="accordion-body">Yes, all completed courses provide verifiable certificates recognized by industry professionals.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Admissions -->
+    <div class="col-md-6 faq-category">
+      <h3 class="fw-bold mb-3"><i class="fas fa-user-graduate text-success"></i> Admissions</h3>
+      <div class="accordion" id="admissionsFAQ">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
+              What documents are required for admission?
+            </button>
+          </h2>
+          <div id="a1" class="accordion-collapse collapse" data-bs-parent="#admissionsFAQ">
+            <div class="accordion-body">Applicants must submit a valid ID, academic transcripts, and a passport photo.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+              How long does admission approval take?
+            </button>
+          </h2>
+          <div id="a2" class="accordion-collapse collapse" data-bs-parent="#admissionsFAQ">
+            <div class="accordion-body">Admission approvals typically take 3–5 business days after submission of required documents.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Payments -->
+    <div class="col-md-6 faq-category">
+      <h3 class="fw-bold mb-3"><i class="fas fa-credit-card text-warning"></i> Payments</h3>
+      <div class="accordion" id="paymentsFAQ">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p1">
+              What payment methods are accepted?
+            </button>
+          </h2>
+          <div id="p1" class="accordion-collapse collapse" data-bs-parent="#paymentsFAQ">
+            <div class="accordion-body">We accept bank transfers, debit/credit cards, and mobile payments (Opay, Flutterwave).</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p2">
+              Can I pay in installments?
+            </button>
+          </h2>
+          <div id="p2" class="accordion-collapse collapse" data-bs-parent="#paymentsFAQ">
+            <div class="accordion-body">Yes, installment payment plans are available for selected courses. Contact admissions for more details.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical Support -->
+    <div class="col-md-6 faq-category">
+      <h3 class="fw-bold mb-3"><i class="fas fa-headset text-danger"></i> Technical Support</h3>
+      <div class="accordion" id="techFAQ">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t1">
+              How do I reset my student portal password?
+            </button>
+          </h2>
+          <div id="t1" class="accordion-collapse collapse" data-bs-parent="#techFAQ">
+            <div class="accordion-body">Click "Forgot Password" on the login page, enter your email, and follow the reset link instructions.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t2">
+              Who do I contact for IT issues?
+            </button>
+          </h2>
+          <div id="t2" class="accordion-collapse collapse" data-bs-parent="#techFAQ">
+            <div class="accordion-body">For IT support, contact our Help Desk at <a href="tel:+2349073185861">+2349073185861</a> or use the live chat below.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Resources</h5>
+        <ul class="list-unstyled">
+          <li><a href="help-center.html">Help Center</a></li>
+          <li><a href="student-portal.html">Student Portal</a></li>
+          <li><a href="e-library.html">eLibrary</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Company</h5>
+        <ul class="list-unstyled">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="course-career.html">Careers</a></li>
+          <li><a href="policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Connect</h5>
+        <div>
+          <a href="#" class="me-3"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="#" class="me-3"><i class="fab fa-twitter fa-lg"></i></a>
+          <a href="#" class="me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+        </div>
+        <p class="mt-3">Call: <a href="tel:+2349073185861" class="text-white">+2349073185861</a></p>
+      </div>
+    </div>
+    <div class="text-center mt-4">&copy; 2025 Youngtec Computers Academy. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<!-- Live Chat Widget -->
+<div class="chat-widget">
+  <a href="https://wa.me/2349073185861" target="_blank" class="chat-btn"><i class="fab fa-whatsapp"></i></a>
+  <a href="tel:+2349073185861" class="chat-btn call-btn"><i class="fas fa-phone-alt"></i></a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Search Help Topics
+  document.getElementById('helpSearch').addEventListener('keyup', function() {
+    let filter = this.value.toLowerCase();
+    document.querySelectorAll('.accordion-item').forEach(item => {
+      let text = item.innerText.toLowerCase();
+      item.style.display = text.includes(filter) ? '' : 'none';
+    });
+  });
+</script>
+</body>
+</html>

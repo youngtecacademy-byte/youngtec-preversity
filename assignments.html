@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignments - Youngtec Computers Academy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      background: linear-gradient(90deg, navy, royalblue);
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+    }
+    nav .logo {
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, royalblue, navy);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 18px;
+    }
+
+    /* Assignments List */
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    .assignment-card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+    .assignment-card:hover {
+      transform: translateY(-3px);
+    }
+    .assignment-card h3 {
+      margin: 0;
+      color: navy;
+    }
+    .assignment-card p {
+      margin: 8px 0;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      margin-top: 10px;
+      font-size: 14px;
+      color: white;
+      background-color: navy;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background-color: darkblue;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(90deg, navy, royalblue);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+    footer p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Youngtec Logo"> 
+    </a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="courseware.html">Courseware</a></li>
+      <li><a href="assignments.html">Assignments</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="downloads.html">Downloads</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Assignments</h1>
+    <p>Track, complete, and submit your assignments on time.</p>
+  </section>
+
+  <!-- Assignments List -->
+  <div class="container">
+    <div class="assignment-card">
+      <h3>Web Design Project</h3>
+      <p><strong>Due Date:</strong> September 10, 2025</p>
+      <p>Create a 3-page responsive website using HTML & CSS.</p>
+      <a href="assignment-details.html" class="btn">View Details</a>
+    </div>
+
+    <div class="assignment-card">
+      <h3>Graphic Design Task</h3>
+      <p><strong>Due Date:</strong> September 15, 2025</p>
+      <p>Design a company logo and flyer using Photoshop or Canva.</p>
+      <a href="assignment-details.html" class="btn">View Details</a>
+    </div>
+
+    <div class="assignment-card">
+      <h3>Database Mini Project</h3>
+      <p><strong>Due Date:</strong> September 20, 2025</p>
+      <p>Build a student record system using MS Access or MySQL.</p>
+      <a href="assignment-details.html" class="btn">View Details</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>Youngtec Computers Academy</strong></p>
+    <p>Empowering the Next Generation with Technology</p>
+    <p>&copy; 2025 Youngtec Computers. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

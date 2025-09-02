@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Details - Youngtec Computers Academy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #001f3f; /* Navy blue */
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 40px;
+    }
+    nav a {
+      color: #FFD700; /* Yellow */
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #001f3f;
+    }
+    .message-meta {
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 15px;
+    }
+    .message-body {
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background: #fefefe;
+      margin-bottom: 30px;
+    }
+    form {
+      margin-top: 20px;
+    }
+    form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #001f3f;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    form button {
+      background-color: #FFD700;
+      color: #001f3f;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #e6c200;
+    }
+    footer {
+      background-color: #001f3f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #FFD700;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="images/logo.png" alt="Youngtec Logo">
+    <nav>
+      <a href="student-portal.html">Dashboard</a>
+      <a href="courses.html">Courses</a>
+      <a href="messages.html">Messages</a>
+      <a href="profile.html">Profile</a>
+      <a href="logout.html">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Container -->
+  <div class="container">
+    <h2>Message Details</h2>
+    <div class="message-meta">
+      <p><strong>From:</strong> Instructor Prudent Amos</p>
+      <p><strong>Date:</strong> August 20, 2025</p>
+      <p><strong>Subject:</strong> Reminder: Project Submission Deadline</p>
+    </div>
+    <div class="message-body">
+      <p>Hello Student,</p>
+      <p>This is a gentle reminder that your project submission for the Web Development Bootcamp is due by <strong>August 25, 2025</strong>. Please ensure your work is submitted on time to avoid penalties.</p>
+      <p>Best regards,<br>Prudent Amos</p>
+    </div>
+
+    <!-- Reply Form -->
+    <h3>Reply to Message</h3>
+    <form action="https://formspree.io/f/xzzvqdrn" method="POST">
+      <label for="student-name">Your Name</label>
+      <input type="text" id="student-name" name="name" required>
+
+      <label for="student-email">Your Email</label>
+      <input type="email" id="student-email" name="_replyto" required>
+
+      <label for="reply">Your Reply</label>
+      <textarea id="reply" name="message" rows="6" placeholder="Type your reply here..." required></textarea>
+
+      <button type="submit">Send Reply</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 1998-2025 Youngtec Computers Academy. All rights reserved.</p>
+    <p>
+      <a href="blog.html">Blog</a> | 
+      <a href="contact.html">Contact Us</a> |
+      <a href="course-career.html">Career</a>
+    </p>
+  </footer>
+</body>
+</html>

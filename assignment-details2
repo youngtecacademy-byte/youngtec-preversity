@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 2 - Youngtec Student Portal</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
+    header { background: navy; color: white; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; }
+    header img { height: 40px; }
+    nav a { color: white; margin-left: 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover { color: yellow; }
+    .container { max-width: 900px; margin: 30px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    h1 { color: navy; }
+    .btn { display: inline-block; padding: 12px 20px; margin: 10px 5px; border-radius: 5px; font-weight: bold; text-decoration: none; }
+    .btn-email { background: navy; color: white; }
+    .btn-whatsapp { background: #25D366; color: white; }
+    footer { background: navy; color: white; text-align: center; padding: 20px; margin-top: 30px; }
+    footer a { color: yellow; margin: 0 10px; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Youngtec Logo">
+    <nav>
+      <a href="student-portal.html">Dashboard</a>
+      <a href="my-courses.html">Courses</a>
+      <a href="assignments.html">Assignments</a>
+      <a href="messages.html">Messages</a>
+      <a href="profile.html">Profile</a>
+      <a href="logout.html">Logout</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Assignment 2: CSS Styling</h1>
+    <p><strong>Due Date:</strong> September 17, 2025</p>
+    <p><strong>Instructions:</strong> Style the webpage you built in Assignment 1. Add colors, fonts, and a simple navigation menu.</p>
+
+    <h3>Submit Your Work</h3>
+    <a href="mailto:assignments@youngtecacademy.com?subject=Assignment 2 Submission" class="btn btn-email">Submit via Email</a>
+    <a href="https://wa.me/2348012345678?text=I%20want%20to%20submit%20Assignment%202" target="_blank" class="btn btn-whatsapp">Submit via WhatsApp</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Youngtec Computers Academy | <a href="privacy.html">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>

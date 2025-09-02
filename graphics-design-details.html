@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graphics Design - Course Details</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #fdfdfd; color: #333; }
+    header { background: #002244; color: #fff; padding: 1rem 2rem; position: sticky; top: 0; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
+    header .logo { font-size: 1.5rem; font-weight: bold; color: #FFD700; }
+    nav a { color: #fff; margin: 0 0.8rem; text-decoration: none; font-weight: bold; }
+    nav a:hover { color: #FFD700; }
+
+    .hero {
+      background: linear-gradient(rgba(0,31,63,0.8), rgba(0,31,63,0.8)), url('images/graphic-design-hero.jpg') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 { margin: 0; font-size: 2.5rem; }
+    .hero p { margin-top: 0.5rem; font-size: 1.2rem; }
+
+    .content { display: flex; padding: 2rem; max-width: 1200px; margin: auto; gap: 2rem; }
+    .main { flex: 3; }
+    .main h2 { color: #002244; border-left: 5px solid #FFD700; padding-left: 0.5rem; margin-top: 1.5rem; }
+    .sidebar { flex: 1; background: #f4f4f4; padding: 1rem; border-radius: 8px; }
+
+    .apply-btn { display: inline-block; background: #FFD700; color: #002244; padding: 0.7rem 1.2rem; text-decoration: none; font-weight: bold; border-radius: 6px; margin-top: 1rem; }
+    .apply-btn:hover { background: #e6c200; }
+
+    .share { margin-top: 2rem; }
+    .share a { margin-right: 0.5rem; text-decoration: none; color: #002244; font-weight: bold; }
+    .share a:hover { color: #FFD700; }
+
+    footer { background: #002244; color: #fff; padding: 2rem; margin-top: 3rem; }
+    footer .footer-content { display: flex; flex-wrap: wrap; justify-content: space-between; }
+    footer .footer-content div { flex: 1; margin: 1rem; }
+    footer h3 { color: #FFD700; }
+    footer a { color: #fff; text-decoration: none; display: block; margin-top: 0.3rem; }
+    footer a:hover { color: #FFD700; }
+    .copyright { text-align: center; margin-top: 2rem; font-size: 0.9rem; color: #aaa; }
+
+    /* Progress Bar */
+    #progress-bar { position: fixed; top: 0; left: 0; height: 5px; background: #FFD700; width: 0%; z-index: 2000; }
+  </style>
+</head>
+<body>
+  <div id="progress-bar"></div>
+  <header>
+    <div class="logo">Youngtec Computers</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="hot-courses.html">Hot Courses</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Graphics Design</h1>
+    <p>Master the art of visual communication and design creativity.</p>
+  </section>
+
+  <section class="content">
+    <div class="main">
+      <h2>Course Overview</h2>
+      <p>This Graphics Design program equips students with practical skills in digital and print design. Students learn to use tools like Photoshop, Illustrator, and CorelDRAW to create stunning visuals for branding, advertising, and digital media.</p>
+
+      <h2>What You'll Learn</h2>
+      <ul>
+        <li>Fundamentals of design and color theory</li>
+        <li>Working with Adobe Photoshop, Illustrator & CorelDRAW</li>
+        <li>Logo design, posters, flyers, and social media graphics</li>
+        <li>Designing for print vs. digital platforms</li>
+        <li>Portfolio development</li>
+      </ul>
+
+      <h2>Duration & Tuition</h2>
+      <p><strong>Duration:</strong> 2 Months<br>
+         <strong>Tuition Fee:</strong> ₦224,000</p>
+
+      <h2>Career Opportunities</h2>
+      <p>Graduates can pursue careers as graphic designers, brand specialists, digital media consultants, and freelancers in creative industries.</p>
+
+      <div class="share">
+        <strong>Share this Course:</strong><br>
+        <a href="https://www.facebook.com/groups/148103598674098">Facebook</a> | 
+        <a href="https://x.com/YoungtecCom/status/1958753041932271717">Twitter</a> | 
+        <a href="https://api.whatsapp.com/send/?phone=2348163860415&text&type=phone_number&app_absent=0">WhatsApp</a>
+      </div>
+    </div>
+
+    <aside class="sidebar">
+      <h3>Ready to Apply?</h3>
+      <p>Take the first step in your design career today.</p>
+      <a class="apply-btn" href="enroll.html">Apply Now</a>
+
+      <h3 style="margin-top:2rem;">Related Courses</h3>
+      <ul>
+        <li><a href="computer-literacy-details.html">Computer Literacy</a></li>
+        <li><a href="web-design-details.html">Web Design</a></li>
+        <li><a href="mobile-development-details.html">Mobile Development</a></li>
+      </ul>
+    </aside>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>About Youngtec</h3>
+        <p>Youngtec provides world-class IT education and digital skills training for students and professionals worldwide.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="hot-courses.html">Hot Courses</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Contact Us</h3>
+        <p>Email: info@youngtec.com<br>Phone: +234 816 386 0415</p>
+      </div>
+    </div>
+    <div class="copyright">
+      © 1998-2025 Youngtec. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Progress bar scroll effect
+    window.addEventListener('scroll', function() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById("progress-bar").style.width = scrolled + "%";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core Values | Youngtec Portal</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    /* Hero curved bottom */
+    .hero {
+      background: linear-gradient(135deg, #001f54, #003366); /* navy gradient */
+      clip-path: ellipse(100% 90% at 50% 0%);
+    }
+    /* Value cards */
+    .value-card {
+      transition: transform 0.3s, box-shadow 0.3s, opacity 0.6s;
+      opacity: 0;
+      transform: translateY(30px);
+      border-top: 4px solid #FFD700; /* yellow accent */
+    }
+    .value-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Back to Top button */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #001f54; /* navy */
+      color: #FFD700; /* yellow */
+      padding: 12px 16px;
+      border-radius: 50%;
+      display: none;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+      z-index: 100;
+    }
+    #backToTop:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body class="font-roboto text-gray-800 scroll-smooth">
+
+  <!-- Sticky Navbar -->
+  <nav class="sticky top-0 z-50 bg-gradient-to-r from-[#001f54] to-[#003366] text-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="images/logo.png" alt="Logo" class="w-30 h-10">
+    </a>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="course-career.html" class="hover:underline">Careers</a></li>
+        <li><a href="enroll.html" class="hover:underline">Enroll</a></li>
+        <li><a href="contact.html" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero text-white text-center py-24">
+    <h1 class="text-5xl font-bold mb-4">Our Core Values</h1>
+    <p class="text-xl max-w-2xl mx-auto">Guiding principles that drive excellence, innovation, integrity, love, care, and creativity in everything we do.</p>
+  </section>
+
+  <!-- Core Values Content -->
+  <section id="core-values" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+      
+      <!-- Integrity -->
+      <div class="value-card bg-white p-8 rounded-2xl shadow-lg text-center">
+        <i class="fas fa-shield-alt text-[#001f54] text-4xl mb-4"></i>
+        <h3 class="text-2xl font-bold mb-3 text-[#001f54]">Integrity</h3>
+        <p>We uphold honesty and transparency in all our actions, ensuring trust and credibility with students and partners.</p>
+      </div>
+
+      <!-- Innovation -->
+      <div class="value-card bg-white p-8 rounded-2xl shadow-lg text-center">
+        <i class="fas fa-lightbulb text-[#001f54] text-4xl mb-4"></i>
+        <h3 class="text-2xl font-bold mb-3 text-[#001f54]">Innovation</h3>
+        <p>We embrace creativity and technology to deliver forward-thinking learning experiences and solutions.</p>
+      </div>
+
+      <!-- Excellence -->
+      <div class="value-card bg-white p-8 rounded-2xl shadow-lg text-center">
+        <i class="fas fa-trophy text-[#001f54] text-4xl mb-4"></i>
+        <h3 class="text-2xl font-bold mb-3 text-[#001f54]">Excellence</h3>
+        <p>We strive for the highest standards in education, training, and service delivery across all programs.</p>
+      </div>
+
+      <!-- Love -->
+      <div class="value-card bg-white p-8 rounded-2xl shadow-lg text-center">
+        <i class="fas fa-heart text-[#001f54] text-4xl mb-4"></i>
+        <h3 class="text-2xl font-bold mb-3 text-[#001f54]">Love</h3>
+        <p>We foster a culture of kindness, empathy, and respect for everyone in our community.</p>
+      </div>
+
+      <!-- Care -->
+      <div class="value-card bg-white p-8 rounded-2xl shadow-lg text-center">
+        <i class="fas fa-hands-helping text-[#001f54] text-4xl mb-4"></i>
+        <h3 class="text-2xl font-bold mb-3 text-[#001f54]">Care</h3>
+        <p>We provide support and guidance, prioritizing the well-being and growth of our students.</p>
+      </div>
+
+      <!-- Creativity -->
+      <div class="value-card bg-white p-8 rounded-2xl shadow-lg text-center">
+        <i class="fas fa-paint-brush text-[#001f54] text-4xl mb-4"></i>
+        <h3 class="text-2xl font-bold mb-3 text-[#001f54]">Creativity</h3>
+        <p>We encourage imaginative thinking and innovative problem-solving in all learning endeavors.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Stats / Achievements Section -->
+  <section id="stats" class="py-16 bg-gradient-to-r from-[#e0e7ff] to-[#c7d2fe]">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Why Our Values Matter</h2>
+      <p class="max-w-2xl mx-auto text-gray-700 mb-8">
+        These core values are the foundation of every initiative we undertake and inspire our students to reach their full potential.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white rounded-xl shadow-md">
+          <h3 class="text-4xl font-bold text-[#001f54]">25+</h3>
+          <p>Years of Excellence</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-md">
+          <h3 class="text-4xl font-bold text-[#001f54]">13000+</h3>
+          <p>Students Trained</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-md">
+          <h3 class="text-4xl font-bold text-[#001f54]">50+</h3>
+          <p>Professional Partnerships</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-gradient-to-r from-[#001f54] to-[#003366] text-white py-12 mt-16">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="font-bold text-xl mb-4">Youngtec Computers Academy</h3>
+        <p>Empowering students with technology, creativity, and problem-solving skills for a brighter future.</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-xl mb-4">Quick Links</h3>
+        <ul>
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="courseware.html" class="hover:underline">Courseware</a></li>
+          <li><a href="enroll.html" class="hover:underline">Enroll</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold text-xl mb-4">Contact Us</h3>
+        <p>Email: info@youngtec.com</p>
+        <p>Phone: +234 816 386 0415</p>
+        <p>WhatsApp: +234 907 318 5861</p>
+      </div>
+    </div>
+    <div class="text-center mt-8 text-sm">© 1998-2025 Youngtec Portal. All rights reserved.</div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    // Fade-in cards on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.value-card').forEach(card => observer.observe(card));
+
+    // Back to Top button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 300){
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>

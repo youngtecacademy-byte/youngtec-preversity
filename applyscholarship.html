@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply for Youngtec Scholarship - January 2026</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f8fb;
+      color: #333;
+    }
+    header {
+      background: navy;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: yellow;
+    }
+    .hero {
+      background: linear-gradient(135deg, navy, #004080);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: 34px;
+    }
+    .hero p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    .form-section {
+      background: white;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    }
+    .form-section h2 {
+      text-align: center;
+      color: navy;
+      margin-bottom: 20px;
+    }
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #222;
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+    form button {
+      margin-top: 20px;
+      padding: 14px;
+      width: 100%;
+      background: navy;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 17px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #003366;
+    }
+    footer {
+      background: navy;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navbar -->
+  <header>
+    <div class="logo">Youngtec Computers</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="admission.html">Admission</a>
+      <a href="payments.html">Payments</a>
+      <a href="scholarship-results.html">Scholarship Results</a>
+      <a href="blog-post1.html">Blog</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Apply for Youngtec Scholarship - January 2026</h1>
+    <p>Open for students between ages 11-20 in public schools across Nigeria. 
+    Win a scholarship to learn FREE of charge at Youngtec Computers Academy.</p>
+  </div>
+
+  <!-- Scholarship Application Form -->
+  <div class="form-section">
+    <h2>Scholarship Application Form</h2>
+    <form action="https://formspree.io/f/xzzvqdrn" method="POST">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+      <label for="school">School Name</label>
+      <input type="text" id="school" name="school" placeholder="Enter your school name" required>
+
+      <label for="state">State of Residence</label>
+      <input type="text" id="state" name="state" placeholder="Enter your state" required>
+
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" min="11" max="20" placeholder="Enter your age" required>
+
+      <label for="program">Preferred IT Program</label>
+      <select id="program" name="program" required>
+        <option value="">-- Select Program --</option>
+        <option>Computer Literacy</option>
+        <option>Graphics Design</option>
+        <option>Web Design</option>
+        <option>Mobile Development</option>
+        <option>Web Development</option>
+        <option>Coding</option>
+        <option>AI & Robotics</option>
+      </select>
+
+      <label for="why">Why do you want this Scholarship?</label>
+      <textarea id="why" name="why" rows="4" placeholder="Write your reason here..." required></textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Youngtec Computers. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

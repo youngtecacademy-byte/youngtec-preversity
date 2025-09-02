@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages - Student Portal | Youngtec Computers Academy</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; }
+    header { background: #001f3f; color: white; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; }
+    header img { height: 40px; }
+    nav a { color: yellow; margin: 0 10px; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+
+    .container { max-width: 900px; margin: 30px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    h2 { color: #001f3f; margin-bottom: 20px; }
+    
+    .message-list { list-style: none; padding: 0; }
+    .message-list li { padding: 15px; border-bottom: 1px solid #ddd; }
+    .message-list li a { text-decoration: none; color: #001f3f; font-weight: bold; display: block; }
+    .message-list li small { display: block; color: #666; margin-top: 5px; }
+
+    .new-message { margin-top: 30px; padding: 20px; background: #f1f1f1; border-radius: 8px; }
+    .new-message h3 { margin-top: 0; color: #001f3f; }
+    .new-message form input, 
+    .new-message form textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; }
+    .new-message form button { background: #001f3f; color: yellow; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+    .new-message form button:hover { background: #004080; }
+
+    footer { background: #001f3f; color: white; padding: 30px 20px; margin-top: 40px; }
+    footer .footer-content { max-width: 1000px; margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap; }
+    footer .footer-section { margin: 10px; }
+    footer a { color: yellow; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="images/logo.png" alt="Youngtec Computers Academy Logo">
+    <nav>
+      <a href="student-portal.html">Dashboard</a>
+      <a href="my-courses.html">Courses</a>
+      <a href="assignments.html">Assignments</a>
+      <a href="messages.html">Messages</a>
+      <a href="profile.html">Profile</a>
+      <a href="logout.html">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Messages Container -->
+  <div class="container">
+    <h2>My Messages</h2>
+    <ul class="message-list">
+      <li>
+        <a href="message-details1.html">📩 Assignment 1 Submission Reminder</a>
+        <small>From: Instructor | Date: Aug 23, 2025</small>
+      </li>
+      <li>
+        <a href="message-details2.html">📩 Welcome to Python Programming Essentials</a>
+        <small>From: Academy | Date: Aug 20, 2025</small>
+      </li>
+    </ul>
+
+    <!-- New Message Form (via Formspree) -->
+    <div class="new-message">
+      <h3>Send a New Message</h3>
+      <form action="https://formspree.io/f/xzzvqdrn" method="POST">
+        <input type="text" name="student_name" placeholder="Your Name" required>
+        <input type="email" name="student_email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" rows="5" placeholder="Type your message..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Youngtec Computers Academy</h3>
+        <p>Empowering students with digital skills for the future.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="student-portal.html">Dashboard</a><br>
+        <a href="community.html">Community</a><br>
+        <a href="assignments.html">Assignments</a><br>
+        <a href="blog.html">Blog</a>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>Email: support@youngtecacademy.com</p>
+        <p>Phone: +234-816-386-0415</p>
+      </div>
+      <p>&copy; 2025 Youngtec Student Portal | Powered by Youngtec Computers</p>
+    </div>
+  </footer>
+
+</body>
+</html>

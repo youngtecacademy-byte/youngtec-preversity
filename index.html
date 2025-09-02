@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youngtec Computers Academy</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    /* Navbar */
+    .navbar {
+      background-color: #0A2A4D; /* Deep Blue */
+    }
+    .navbar-brand img {
+      height: 45px;
+      margin-right: 8px;
+    }
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+    }
+    .nav-link:hover {
+      color: #FFD700 !important; /* Deep Yellow */
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(10,42,77,0.8), rgba(10,42,77,0.8)), url('images/img99.jpeg') center/cover no-repeat;
+      color: white;
+      padding: 120px 0;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin: 15px auto;
+      max-width: 700px;
+    }
+    .btn-enroll {
+      background-color: #FFD700;
+      color: #0A2A4D;
+      font-weight: 600;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-transform: uppercase;
+    }
+    .btn-enroll:hover {
+      background-color: #e6c200;
+      color: #fff;
+    }
+
+    /* Courses Section */
+    .course-card {
+      border: none;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+    .course-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    .course-card img {
+      border-top-left-radius: .5rem;
+      border-top-right-radius: .5rem;
+    }
+
+    /* Testimonials */
+    .testimonial {
+      background-color: #F8F9FA;
+      padding: 50px 0;
+    }
+
+    /* Footer */
+        footer {
+      background-color: #001f3f;
+      color: #fff;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    footer .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    footer h4 {
+      color: #FFD700;
+      margin-bottom: 0.5rem;
+    }
+    footer a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin: 0.25rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo.png" alt="Youngtec Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span data-feather="menu"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="instructors.html">Instructors</a></li>
+          <li class="nav-item"><a class="nav-link" href="academic.html">Academic</a></li>
+          <li class="nav-item"><a class="nav-link" href="tuition.html">Tuition</a></li>
+          <li class="nav-item"><a class="nav-link" href="courseware.html">Courseware</a></li>
+          <li class="nav-item"><a class="nav-link" href="training.html">Training</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('images/img87.jpeg');">
+  <div class="container">
+      <h1>Master the Future of Technology</h1>
+      <p>Youngtec Computers Academy offers industry-leading IT training to help you acquire in-demand tech skills and advance your career.</p>
+      <a href="enroll.html" class="btn btn-enroll mt-3">Enroll Now</a>
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Popular Courses</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card course-card">
+            <img src="images/img115.jpeg" class="card-img-top" alt="Course 1">
+            <div class="card-body">
+              <h5 class="card-title">Full Stack Web Development</h5>
+              <p class="card-text">Learn to build responsive websites and applications using HTML, CSS, JavaScript, and modern frameworks.</p>
+              <a href="course-details1.html" class="btn btn-sm btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card course-card">
+            <img src="images/img93.jpeg" class="card-img-top" alt="Course 2">
+            <div class="card-body">
+              <h5 class="card-title">Data Science & AI</h5>
+              <p class="card-text">Master data analysis, visualization, and AI model building for real-world applications.</p>
+              <a href="course-details2.html" class="btn btn-sm btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card course-card">
+            <img src="images/img112.jpeg" class="card-img-top" alt="Course 3">
+            <div class="card-body">
+              <h5 class="card-title">Cybersecurity Essentials</h5>
+              <p class="card-text">Protect systems and networks with hands-on training in cybersecurity fundamentals.</p>
+              <a href="course-details3.html" class="btn btn-sm btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="container">
+      <h2 class="text-center mb-4">Hot Courses</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card course-card">
+            <img src="images/web-design-mockup.png" class="card-img-top" alt="Course 1">
+            <div class="card-body">
+              <h5 class="card-title">Web Development</h5>
+              <p class="card-text">Learn to build responsive websites and applications using HTML, CSS, JavaScript, and modern frameworks.</p>
+              <a href="web-design-details.html" class="btn btn-sm btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card course-card">
+            <img src="images/graphic-design-hero.jpg" class="card-img-top" alt="Course 2">
+            <div class="card-body">
+              <h5 class="card-title">Graphc Design</h5>
+              <p class="card-text">This Graphics Design program equips students with practical skills in digital and print design...</p>
+              <a href="graphics-design-details.html" class="btn btn-sm btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card course-card">
+            <img src="images/mobile-app.jpeg" class="card-img-top" alt="Course 3">
+            <div class="card-body">
+              <h5 class="card-title">Mobile Development</h5>
+              <p class="card-text">Mobile devices are at the center of today’s digital world. This program introduces you to creating applications for Android and iOS platforms using modern development environments...</p>
+              <a href="mobile-development-details.html" class="btn btn-sm btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonial text-center">
+    <div class="container">
+      <h2 class="mb-4">What Our Students Say</h2>
+      <blockquote class="blockquote">
+        <p class="mb-4">"Youngtec Computers Academy completely transformed my skills and gave me the confidence to pursue a career in IT. Highly recommended!"</p>
+        <footer class="blockquote-footer">Aderiye Samuel, Web Developer</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h4>About Us</h4>
+        <p>Youngtec Computers is dedicated to providing quality IT training and empowering students with digital skills for the future.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="events.html">Events</a>
+        <a href="scholarship-results.html">Scholarship</a>
+        <a href="my-courses.html">Personalised Courses</a>
+        <a href="e-library.html">E-Library</a>
+        <a href="smartexamsuite.html">SmartExam Suite</a>
+        <a href="hot-courses.html">Hot Courses</a>
+        <a href="blog-post1.html">New technologies</a>
+        <a href="student-portal.html">Student Portal</a>
+        <a href="author.html">Meet the Author</a>
+        <a href="search.html">Youngtec Sitelite</a>
+        <a href="https://prudentamos.github.io/student--results/">Youngtec High Schools</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>📞 +2348163860415<br>📞 +2349073185861</p>
+        <p>📧 info@youngtec.com</p>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:1rem;">&copy; 1998-2025 Youngtec Computers. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Details - Student Portal</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; background:#f9f9f9; }
+    header { background:#001f3f; color:white; padding:15px 30px; display:flex; align-items:center; justify-content:space-between; }
+    header img { height:40px; }
+    nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; }
+    nav a:hover { text-decoration:underline; }
+
+    .container { width:80%; margin:30px auto; background:white; padding:20px; border-radius:8px; }
+    h2 { color:#001f3f; margin-bottom:20px; }
+
+    .message { padding:15px; background:#f1f1f1; border-radius:5px; margin-bottom:20px; }
+    .reply-form label { font-weight:bold; display:block; margin:10px 0 5px; }
+    .reply-form input, .reply-form textarea { width:100%; padding:10px; border:1px solid #ccc; border-radius:5px; }
+    .reply-form button { background:#001f3f; color:white; padding:10px 20px; border:none; cursor:pointer; margin-top:10px; }
+    .reply-form button:hover { background:#ffcc00; color:#001f3f; }
+
+    footer { background:#001f3f; color:white; text-align:center; padding:15px; margin-top:40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Brand Logo">
+    <nav>
+      <a href="student-portal.html">Home</a>
+      <a href="my-courses.html">My Courses</a>
+      <a href="assignments.html">Assignments</a>
+      <a href="messages.html">Messages</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Message Details</h2>
+    <div class="message">
+      <p><strong>From:</strong> Admin</p>
+      <p><strong>Subject:</strong> Welcome to the Student Portal</p>
+      <p><strong>Message:</strong></p>
+      <p>Dear Student, welcome to the Youngtec Student Portal! We are excited to have you on board. Explore your courses, assignments, and resources.</p>
+    </div>
+
+    <h2>Reply</h2>
+    <form class="reply-form" action="https://formspree.io/f/xzzvqdrn" method="POST">
+      <label>Your Name:</label>
+      <input type="text" name="name" required>
+
+      <label>Your Email:</label>
+      <input type="email" name="email" required>
+
+      <label>Your Reply:</label>
+      <textarea name="reply" rows="5" required></textarea>
+
+      <button type="submit">Send Reply</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Youngtec Student Portal | Powered by Youngtec Computers</p>
+  </footer>
+</body>
+</html>
